@@ -1,0 +1,45 @@
+name: Push to SourceForge
+
+on:
+  workflow_dispatch:
+    inputs:
+      FILE_URL:
+        description: "File url to push"
+        required: true
+      SF_USERNAME:
+        description: "SourceForge username"
+        required: true
+        default: 'dogpoopy'
+      SF_PROJECT_NAME:
+        description: "SourceForge project name"
+        required: true
+        default: 'aosp-realm'
+      SF_TARGET_FOLDER:
+        description: "SourceForge project folder"
+        required: false
+
+jobs:
+  push_to_sf:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Cleanup
+        run: rm -rf ${{ github.workspace }}/*
+
+      - name: Download the File
+        run: |
+          curl -L -O "${{ github.event.inputs.FILE_URL }}"
+
+      - name: Set up SSH connection
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Upload to SourceForge
+        run: |
+          file_name=$(basename "${{ github.event.inputs.FILE_URL }}")
+          scp -o StrictHostKeyChecking=no "$file_name" "${{ github.event.inputs.SF_USERNAME }}"@frs.sourceforge.net:/home/frs/project/"${{ github.event.inputs.SF_PROJECT_NAME }}"/"${{ github.event.inputs.SF_TARGET_FOLDER }}"
