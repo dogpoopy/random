@@ -1,0 +1,135 @@
+name: Build Kernel
+
+on:
+  workflow_dispatch:
+    inputs:
+      KERNEL_SOURCE:
+        description: 'Kernel source including branch'
+        required: true
+        default: 'https://github.com/aosp-realm/kernel_xiaomi_sm8250.git -b test'
+      KERNEL_NAME:
+        required: true
+        default: 'perf'
+      CONFIG_FILE:
+        required: true
+        default: 'apollo_defconfig'
+      TOOLCHAIN_URL:
+        description: "Clone url of your toolchain including branch"
+        required: true
+        default: 'https://gitlab.com/dogpoopy/clang-r510928.git -b main'
+      ANYKERNEL:
+        description: "Clone url of your AnyKernel including branch"
+        required: true
+        default: 'https://github.com/aosp-realm/AnyKernel3.git -b master'
+
+jobs:
+  Kernel:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    defaults:
+      run:
+       shell: bash
+       working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Cleanup
+        run: rm -rf ${{ github.workspace }}/*
+
+      - name: Set-up environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev
+          sudo apt-get install -y curl git ftp lftp wget libarchive-tools ccache python2 python2-dev
+          sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar cpio jq
+      - name: Clone kernel source
+        run: git clone ${{ github.event.inputs.KERNEL_SOURCE }} --depth=1 .
+
+      - name: Set-up and Compilation
+        run: |
+         objdir="${{ github.workspace }}/out"
+         anykernel="${{ github.workspace }}/anykernel"
+         builddir="${{ github.workspace }}/build"
+         zimage="${{ github.workspace }}/out/arch/arm64/boot/Image"
+         clang_dir="${{ github.workspace }}/toolchain"
+         kernel_name=${{ github.event.inputs.KERNEL_NAME }}
+         zip_name="${kernel_name}-$(date +"%d-%m-%Y-%H%M").zip"
+
+         config_file=${{ github.event.inputs.CONFIG_FILE }}
+         arch="arm64"
+         ccache=$(command -v ccache)
+
+         export PATH="${clang_dir}/bin:$PATH"
+         
+         git clone -q --depth=1 --single-branch ${{ github.event.inputs.TOOLCHAIN_URL }} "$clang_dir"
+
+         make_defconfig() {
+           start=$(date +"%s")
+           make -s ARCH=${arch} O=${objdir} ${config_file} -j$(nproc --all)
+           }
+           
+         compile() {
+           cd "${{ github.workspace }}"
+           
+           make -j$(nproc --all) \
+           O=out \
+           ARCH=${arch} \
+           CC="ccache clang" \
+           CROSS_COMPILE=aarch64-linux-gnu- \
+           CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
+           CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
+           AR=llvm-ar \
+           LLVM_NM=llvm-nm \
+           OBJCOPY=llvm-objcopy \
+           LD=ld.lld \
+           NM=llvm-nm \
+           LLVM=1 \
+           LLVM_IAS=1
+           }
+           
+         completion() {
+           cd "${objdir}"
+           compiled_image="arch/arm64/boot/Image"
+           compiled_dtbo="arch/arm64/boot/dtbo.img"
+           
+           if [[ -f ${compiled_image} && -f ${compiled_dtbo} ]]; then
+           git clone -q ${{ github.event.inputs.ANYKERNEL }} "$anykernel"
+           mv -f "${zimage}" "${compiled_dtbo}" "$anykernel"
+           cd "$anykernel"
+           find . -name "*.zip" -type f -delete
+           zip -r "${zip_name}" .
+           mv "*.zip" "${{ github.workspace }}"
+           rm -rf "$anykernel"
+           end=$(date +"%s")
+           diff=$((end - start))
+           echo -e "BUILD COMPLETED IN ${diff} SECONDS"
+         else
+           echo "ERROR: Kernel compilation failed!"
+           exit 1
+         fi
+         
+         }
+         make_defconfig
+         compile
+         completion
+         
+         cd "${{ github.workspace }}"
+         
+        continue-on-error: false
+
+      - name: Set-up compiled files
+        run: |
+          # Set-up files info
+            zip_file=$(find . -name '${{ github.event.inputs.KERNEL_NAME }}*.zip' -print -quit)
+            echo "ZIP_FILE=$zip_file" >> $GITHUB_ENV
+            echo "ZIP_NAME=$(basename "$zip_file" .zip)" >> $GITHUB_ENV
+            echo "RELEASE_DATE=$(date +'%B %-d, %Y %H:%M')" >> $GITHUB_ENV
+            
+      - name: Upload files to repository releases page
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ${{ env.ZIP_FILE }}
+          name: ${{ env.ZIP_NAME }}
+          tag_name: ${{ github.run_id }}
+          body: |
+           Released on ${{ env.RELEASE_DATE }}

@@ -19,7 +19,7 @@ on:
         required: false
 
 jobs:
-  push_to_sf:
+  Upload to Sourceforge:
     runs-on: ubuntu-latest
     defaults:
       run:
