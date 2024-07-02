@@ -49,7 +49,6 @@ jobs:
 
       - name: Set-up and Compilation
         run: |
-         set -x
          objdir="${{ github.workspace }}/out"
          anykernel="${{ github.workspace }}/anykernel"
          clang_dir="${{ github.workspace }}/toolchain"
