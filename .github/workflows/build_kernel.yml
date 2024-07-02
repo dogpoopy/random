@@ -47,24 +47,20 @@ jobs:
 
       - name: Set-up and Compilation
         run: |
+         set -x
          objdir="${{ github.workspace }}/out"
          anykernel="${{ github.workspace }}/anykernel"
-         builddir="${{ github.workspace }}/build"
          clang_dir="${{ github.workspace }}/toolchain"
          kernel_name=${{ github.event.inputs.KERNEL_NAME }}
          zip_name="${kernel_name}-$(date +"%d-%m-%Y-%H%M").zip"
-
-         config_file=${{ github.event.inputs.CONFIG_FILE }}
          arch="arm64"
-         ccache=$(command -v ccache)
-
-         export PATH="${clang_dir}/bin:$PATH"
          
+         export PATH="${clang_dir}/bin:$PATH"
          git clone -q --depth=1 --single-branch ${{ github.event.inputs.TOOLCHAIN_URL }} "$clang_dir"
-
+         
          make_defconfig() {
            start=$(date +"%s")
-           make -s ARCH=${arch} O=${objdir} ${config_file} -j$(nproc --all)
+           make -s ARCH=${arch} O=${objdir} ${{ github.event.inputs.CONFIG_FILE }} -j$(nproc --all)
            }
            
          compile() {
@@ -73,7 +69,7 @@ jobs:
            make -j$(nproc --all) \
            O=out \
            ARCH=${arch} \
-           CC="ccache clang" \
+           CC=clang \
            CROSS_COMPILE=aarch64-linux-gnu- \
            CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
            CROSS_COMPILE_COMPAT=arm-linux-gnueabi- \
