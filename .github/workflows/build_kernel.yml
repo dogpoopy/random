@@ -18,7 +18,7 @@ on:
       TOOLCHAIN_URL:
         description: "Clone url of your toolchain including branch"
         required: true
-        default: 'https://gitlab.com/dogpoopy/clang-r510928.git -b main'
+        default: 'https://gitlab.com/dogpoopy/clang-r487747c.git -b main'
       ANYKERNEL:
         description: "Clone url of your AnyKernel including branch"
         required: true
