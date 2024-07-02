@@ -6,13 +6,15 @@ on:
       KERNEL_SOURCE:
         description: 'Kernel source including branch'
         required: true
-        default: 'https://github.com/aosp-realm/kernel_xiaomi_sm8250.git -b test'
+        default: 'https://github.com/aosp-realm/kernel_xiaomi_sm8250.git -b aosp-14'
       KERNEL_NAME:
+        description: 'Kernel/zip name'
         required: true
         default: 'perf'
       CONFIG_FILE:
+        description: 'Config file (You can put multiple configs separated by space)'
         required: true
-        default: 'apollo_defconfig'
+        default: 'apollo_defconfig vendor/debugfs.config'
       TOOLCHAIN_URL:
         description: "Clone url of your toolchain including branch"
         required: true
