@@ -57,8 +57,6 @@ jobs:
         with:
          path: ${{ github.workspace }}/out
          key: ${{ github.event.inputs.KERNEL_SOURCE }}-out-
-         restore-keys: |
-          ${{ github.event.inputs.CONFIG_FILE }}-out-
 
       - name: Set-up Toolchain and Start Compilation
         run: |
