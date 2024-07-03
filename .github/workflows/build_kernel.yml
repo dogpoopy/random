@@ -51,6 +51,15 @@ jobs:
       - name: Clone kernel source
         run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} -b ${{ github.event.inputs.KERNEL_BRANCH }} ${{ github.workspace }}
 
+      - name: Set-up Cache
+        id: cache-out
+        uses: actions/cache@v4
+        with:
+         path: ${{ github.workspace }}/out
+         key: ${{ github.event.inputs.KERNEL_SOURCE }}-out-
+         restore-keys: |
+          ${{ github.event.inputs.CONFIG_FILE }}-out-
+
       - name: Set-up Toolchain and Start Compilation
         run: |
          objdir="${{ github.workspace }}/out"
