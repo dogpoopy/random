@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       KERNEL_SOURCE:
-        description: 'Kernel source including branch'
+        description: 'Kernel source URL'
         required: true
-        default: 'https://github.com/aosp-realm/kernel_xiaomi_sm8250.git -b aosp-14'
+        default: 'https://github.com/aosp-realm/kernel_xiaomi_sm8250.git'
+      KERNEL_BRANCH:
+        description: 'Kernel branch'
+        required: true
+        default: 'aosp-14'
       KERNEL_NAME:
         description: 'Kernel/zip name'
         required: true
@@ -16,11 +20,11 @@ on:
         required: true
         default: 'apollo_defconfig vendor/debugfs.config'
       TOOLCHAIN_URL:
-        description: "Clone url of your toolchain including branch"
+        description: "Clone URL of your toolchain including branch"
         required: true
         default: 'https://gitlab.com/dogpoopy/clang-r487747c.git -b main'
       ANYKERNEL:
-        description: "Clone url of your AnyKernel including branch"
+        description: "Clone URL of your AnyKernel including branch"
         required: true
         default: 'https://github.com/aosp-realm/AnyKernel3.git -b master'
 
@@ -45,7 +49,7 @@ jobs:
           sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar cpio jq
           
       - name: Clone kernel source
-        run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} ${{ github.workspace }}
+        run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} -b ${{ github.event.inputs.KERNEL_BRANCH }} ${{ github.workspace }}
 
       - name: Set-up Toolchain and Start Compilation
         run: |
