@@ -117,7 +117,8 @@ jobs:
 
       - name: Set-up environment variables
         run: |
-          # Set-up files info
+            set -x
+            # Set-up files info
             zip_file=$(find . -name '${{ github.event.inputs.KERNEL_NAME }}*.zip' -print -quit)
             echo "ZIP_FILE=$zip_file" >> $GITHUB_ENV
             echo "ZIP_NAME=$(basename "$zip_file" .zip)" >> $GITHUB_ENV
