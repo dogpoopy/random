@@ -1,10 +1,42 @@
 #!/bin/bash
 
+usage() {
+  echo "Usage: $0 <project> <device> <build_type> [--reinit]"
+  echo "Projects: PixelOS-14, CrDroid-14, Evolution-14"
+  echo "Build Types: user, userdebug, eng"
+  exit 1
+}
+
+validate_params() {
+  if [ -z "$project" ] || [ -z "$device" ] || [ -z "$build_type" ]; then
+    usage
+  fi
+
+  case "$project" in
+    "PixelOS-14"|"CrDroid-14"|"Evolution-14")
+      ;;
+    *)
+      echo "Invalid project specified"
+      usage
+      ;;
+  esac
+
+  case "$build_type" in
+    "user"|"userdebug"|"eng")
+      ;;
+    *)
+      echo "Invalid build type specified"
+      usage
+      ;;
+  esac
+}
 
 project="$1"
 device="$2"
 build_type="$3"
 reinit="$4"
+
+validate_params
 
 case "$project" in
   "PixelOS-14")
@@ -26,7 +58,7 @@ case "$project" in
     ;;
   *)
     echo "Invalid project specified"
-    exit 1
+    usage
     ;;
 esac
 
@@ -59,4 +91,3 @@ else
     $make_command"
   fi
 fi
-
