@@ -45,9 +45,9 @@ jobs:
           sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar cpio jq
           
       - name: Clone kernel source
-        run: git clone ${{ github.event.inputs.KERNEL_SOURCE }} --depth=1 .
+        run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} .
 
-      - name: Set-up and Compilation
+      - name: Set-up Toolchain and Start Compilation
         run: |
          objdir="${{ github.workspace }}/out"
          anykernel="${{ github.workspace }}/anykernel"
@@ -57,7 +57,8 @@ jobs:
          arch="arm64"
          
          export PATH="${clang_dir}/bin:$PATH"
-         git clone -q --depth=1 --single-branch ${{ github.event.inputs.TOOLCHAIN_URL }} "$clang_dir"
+         echo "CLONING TOOLCHAIN..."
+         git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.TOOLCHAIN_URL }} "$clang_dir"
          
          make_defconfig() {
            start=$(date +"%s")
