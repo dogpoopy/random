@@ -54,7 +54,7 @@ case "$project" in
     repo_init="repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs --depth=1"
     lunch="lunch lineage_$device-$build_type"
     make_command="m evolution"
-    manifest="https://github.com/aosp-realm/android_build_manifest.git -b apollo-xyz"
+    manifest="https://github.com/aosp-realm/android_build_manifest.git -b apollo-evo14"
     ;;
   *)
     echo "Invalid project specified"
