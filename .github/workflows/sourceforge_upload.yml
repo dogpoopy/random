@@ -17,9 +17,13 @@ on:
       SF_TARGET_FOLDER:
         description: "SourceForge project folder"
         required: false
+      FILE_NAME:
+        description: "Name for the file (optional)"
+        required: false
+
 
 jobs:
-  Upload to Sourceforge:
+  Upload:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -39,7 +43,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
-      - name: Upload to SourceForge
+      - name: Rename and Upload to SourceForge
         run: |
           file_name=$(basename "${{ github.event.inputs.FILE_URL }}")
+          if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
+            mv "$file_name" "${{ github.event.inputs.FILE_NAME }}"
+            file_name="${{ github.event.inputs.FILE_NAME }}"
+          fi
           scp -o StrictHostKeyChecking=no "$file_name" "${{ github.event.inputs.SF_USERNAME }}"@frs.sourceforge.net:/home/frs/project/"${{ github.event.inputs.SF_PROJECT_NAME }}"/"${{ github.event.inputs.SF_TARGET_FOLDER }}"
