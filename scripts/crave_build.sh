@@ -8,7 +8,7 @@ usage() {
 }
 
 validate_params() {
-  if [ -z "$project" ] || [ -z "$device" ] || [ -z "$build_type" ]; then
+  if [ -z "$project" ] || [ -z "$device" ]; then
     usage
   fi
 
