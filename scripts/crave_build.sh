@@ -52,8 +52,7 @@ case "$project" in
     ;;
   "Evolution-14")
     repo_init="repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs --depth=1"
-    lunch="lunch lineage_$device-$build_type"
-    make_command="m evolution"
+    make_command="brunch $device"
     manifest="https://github.com/aosp-realm/android_build_manifest.git -b apollo-evo14"
     ;;
   *)
@@ -63,7 +62,7 @@ case "$project" in
 esac
 
 if [ "$reinit" == "--reinit" ]; then
-  if [ "$project" == "CrDroid-14" ]; then
+  if [ "$project" == "CrDroid-14" ] || [ "$project" == "Evolution-14" ]; then
     crave run --no-patch --detached "rm -rf .repo/local_manifests ; \
     $repo_init && \
     git clone $manifest .repo/local_manifests && \
@@ -80,7 +79,7 @@ if [ "$reinit" == "--reinit" ]; then
     $make_command"
   fi
 else
-  if [ "$project" == "CrDroid-14" ]; then
+  if [ "$project" == "CrDroid-14" ] || [ "$project" == "Evolution-14" ]; then
     crave run --no-patch --detached "/opt/crave/resync.sh && \
     source build/envsetup.sh && \
     $make_command"
