@@ -10,7 +10,7 @@ on:
       KERNEL_BRANCH:
         description: 'Kernel branch'
         required: true
-        default: 'aosp-14'
+        default: '14'
       KERNEL_NAME:
         description: 'Kernel/zip name'
         required: true
@@ -38,18 +38,19 @@ jobs:
        working-directory: ${{ github.workspace }}
 
     steps:
-      - name: Cleanup
-        run: rm -rf ${{ github.workspace }}/*
-
       - name: Set-up environment
         run: |
+          rm -rf ${{ github.workspace }}/*
           sudo apt-get update
           sudo apt-get install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev
           sudo apt-get install -y curl git ftp lftp wget libarchive-tools ccache python2 python2-dev
           sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar cpio jq
           
-      - name: Clone kernel source
+      - name: Cloning Kernel Source
         run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.KERNEL_SOURCE }} -b ${{ github.event.inputs.KERNEL_BRANCH }} ${{ github.workspace }}
+
+      - name: Cloning Toolchain
+        run: git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.TOOLCHAIN_URL }} ${{ github.workspace }}/toolchain
 
       - name: Set-up Cache
         id: cache-out
@@ -58,7 +59,7 @@ jobs:
          path: ${{ github.workspace }}/out
          key: ${{ github.event.inputs.KERNEL_SOURCE }}-out-
 
-      - name: Set-up Toolchain and Start Compilation
+      - name: Start Compilation
         run: |
          objdir="${{ github.workspace }}/out"
          anykernel="${{ github.workspace }}/anykernel"
@@ -68,8 +69,6 @@ jobs:
          arch="arm64"
          
          export PATH="${clang_dir}/bin:$PATH"
-         echo "CLONING TOOLCHAIN..."
-         git clone --single-branch --depth=1 --no-tags ${{ github.event.inputs.TOOLCHAIN_URL }} "$clang_dir"
          
          make_defconfig() {
            start=$(date +"%s")
@@ -125,21 +124,16 @@ jobs:
          completion
 
          cd "${{ github.workspace }}"
-         
+
+         # Set-up file info
+         zip_file=$(find . -name '${{ github.event.inputs.KERNEL_NAME }}*.zip' -print -quit)
+         echo "ZIP_FILE=$zip_file" >> $GITHUB_ENV
+         echo "ZIP_NAME=$(basename "$zip_file" .zip)" >> $GITHUB_ENV
+         echo "RELEASE_DATE=$(date +'%B %-d, %Y %H:%M')" >> $GITHUB_ENV
+         echo "DTBO=${{ github.workspace }}/dtbo.img" >> $GITHUB_ENV
+         echo "IMAGE=${{ github.workspace }}/Image" >> $GITHUB_ENV
+
         continue-on-error: false
-
-      - name: Set-up environment variables
-        run: |
-            set -x
-            # Set-up files info
-            zip_file=$(find . -name '${{ github.event.inputs.KERNEL_NAME }}*.zip' -print -quit)
-            echo "ZIP_FILE=$zip_file" >> $GITHUB_ENV
-            echo "ZIP_NAME=$(basename "$zip_file" .zip)" >> $GITHUB_ENV
-            
-            echo "RELEASE_DATE=$(date +'%B %-d, %Y %H:%M')" >> $GITHUB_ENV
-
-            echo "DTBO=${{ github.workspace }}/dtbo.img" >> $GITHUB_ENV
-            echo "IMAGE=${{ github.workspace }}/Image" >> $GITHUB_ENV
   
       - name: Upload files to repository releases page
         uses: softprops/action-gh-release@v1
