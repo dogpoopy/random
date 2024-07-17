@@ -63,7 +63,7 @@ jobs:
          objdir="${{ github.workspace }}/out"
          anykernel="${{ github.workspace }}/anykernel"
          clang_dir="${{ github.workspace }}/toolchain"
-         kernel_name=${{ github.event.inputs.KERNEL_NAME }}
+         kernel_name="${{ github.event.inputs.KERNEL_NAME }}"
          zip_name="${kernel_name}-$(date +"%d-%m-%Y-%H%M").zip"
          arch="arm64"
          
