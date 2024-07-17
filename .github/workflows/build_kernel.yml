@@ -102,6 +102,8 @@ jobs:
 
          if [[ -f ${compiled_image} && -f ${compiled_dtbo} ]]; then
            git clone -q ${{ github.event.inputs.ANYKERNEL }} "$anykernel"
+           cp "${compiled_image}" "${{ github.workspace }}"
+           cp "${compiled_dtbo}" "${{ github.workspace }}"
            mv -f "${compiled_image}" "$anykernel/Image"
            mv -f "${compiled_dtbo}" "$anykernel/dtbo.img"
            cd "$anykernel"
@@ -135,12 +137,17 @@ jobs:
             echo "ZIP_NAME=$(basename "$zip_file" .zip)" >> $GITHUB_ENV
             
             echo "RELEASE_DATE=$(date +'%B %-d, %Y %H:%M')" >> $GITHUB_ENV
-            
+
+            echo "DTBO=${{ github.workspace }}/dtbo.img" >> $GITHUB_ENV
+            echo "IMAGE=${{ github.workspace }}/Image" >> $GITHUB_ENV
+  
       - name: Upload files to repository releases page
         uses: softprops/action-gh-release@v1
         with:
           files: |
             ${{ env.ZIP_FILE }}
+            ${{ env.DTBO }}
+            ${{ env.IMAGE }}
           name: ${{ env.ZIP_NAME }}
           tag_name: ${{ github.run_id }}
           body: |
