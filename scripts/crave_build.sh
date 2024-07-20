@@ -41,7 +41,7 @@ validate_params
 case "$project" in
   "PixelOS-14")
     repo_init="repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs --depth=1"
-    lunch="lunch aosp_$device-$build_type"
+    lunch="lunch aosp_$device-ap2a-$build_type"
     make_command="mka bacon"
     manifest="https://github.com/aosp-realm/android_build_manifest.git -b apollo-pos14"
     ;;
