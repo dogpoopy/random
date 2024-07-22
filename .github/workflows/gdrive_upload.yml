@@ -1,0 +1,47 @@
+name: Upload to Google Drive
+
+on:
+  workflow_dispatch:
+    inputs:
+      FILE_URL:
+        description: "File url to push"
+        required: true
+      FILE_NAME:
+        description: "Name for the file (optional)"
+        required: false
+
+
+jobs:
+  Upload:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Cleanup
+        run: rm -rf ${{ github.workspace }}/*
+
+      - name: Download the File
+        run: |
+          curl -L -O "${{ github.event.inputs.FILE_URL }}"
+
+      - name: Naming
+        run: |
+          file_name=$(basename "${{ github.event.inputs.FILE_URL }}")
+          if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
+            mv "$file_name" "${{ github.event.inputs.FILE_NAME }}"
+            file_name="${{ github.event.inputs.FILE_NAME }}"
+          fi
+
+          echo "FILE_NAME=$file_name" >> $GITHUB_ENV
+
+      - name: google-drive-upload-git-action
+        uses: adityak74/google-drive-upload-git-action@v0.3
+        with:
+          credentials: ${{ secrets.GSERVICE }}
+          folderId: ${{ secrets.FOLDER_ID }}
+          filename: ${{ env.FILE_NAME }}
+          overwrite: "true"
+
