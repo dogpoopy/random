@@ -29,11 +29,13 @@ jobs:
 
       - name: Naming
         run: |
-          file_name=$(basename "${{ github.event.inputs.FILE_URL }}")
-          if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
-            mv "$file_name" "${{ github.event.inputs.FILE_NAME }}"
+         downloaded_file=$(basename "${{ github.event.inputs.FILE_URL }}")
+         if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
+            mv "${downloaded_file}" "${{ github.event.inputs.FILE_NAME }}"
             file_name="${{ github.event.inputs.FILE_NAME }}"
-          fi
+         else
+            file_name="${downloaded_file}"
+         fi
 
           echo "FILE_NAME=$file_name" >> $GITHUB_ENV
 
