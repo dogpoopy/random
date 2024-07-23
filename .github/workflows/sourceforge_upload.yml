@@ -45,9 +45,12 @@ jobs:
 
       - name: Rename and Upload to SourceForge
         run: |
-          file_name=$(basename "${{ github.event.inputs.FILE_URL }}")
-          if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
-            mv "$file_name" "${{ github.event.inputs.FILE_NAME }}"
+         downloaded_file=$(basename "${{ github.event.inputs.FILE_URL }}")
+         if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
+            mv "${downloaded_file}" "${{ github.event.inputs.FILE_NAME }}"
             file_name="${{ github.event.inputs.FILE_NAME }}"
-          fi
-          scp -o StrictHostKeyChecking=no "$file_name" "${{ github.event.inputs.SF_USERNAME }}"@frs.sourceforge.net:/home/frs/project/"${{ github.event.inputs.SF_PROJECT_NAME }}"/"${{ github.event.inputs.SF_TARGET_FOLDER }}"
+         else
+            file_name="${downloaded_file}"
+         fi
+
+         scp -o StrictHostKeyChecking=no "$file_name" "${{ github.event.inputs.SF_USERNAME }}"@frs.sourceforge.net:/home/frs/project/"${{ github.event.inputs.SF_PROJECT_NAME }}"/"${{ github.event.inputs.SF_TARGET_FOLDER }}"
