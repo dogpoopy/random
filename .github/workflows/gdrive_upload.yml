@@ -25,25 +25,23 @@ jobs:
 
       - name: Download the File
         run: |
-          curl -L -O "${{ github.event.inputs.FILE_URL }}"
+          wget "${{ github.event.inputs.FILE_URL }}"
 
       - name: Naming
         run: |
-         downloaded_file=$(basename "${{ github.event.inputs.FILE_URL }}")
-         if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
-            mv "${downloaded_file}" "${{ github.event.inputs.FILE_NAME }}"
-            file_name="${{ github.event.inputs.FILE_NAME }}"
-         else
-            file_name="${downloaded_file}"
-         fi
-
-          echo "FILE_NAME=$file_name" >> $GITHUB_ENV
+          if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
+            mv "$(ls)" "${{ github.event.inputs.FILE_NAME }}"
+            echo "FILE=${{ github.event.inputs.FILE_NAME }}" >> $GITHUB_ENV
+          else
+            FILE=$(ls)
+            echo "FILE=$FILE" >> $GITHUB_ENV
+          fi
 
       - name: google-drive-upload-git-action
         uses: adityak74/google-drive-upload-git-action@v0.3
         with:
           credentials: ${{ secrets.GSERVICE }}
           folderId: ${{ secrets.FOLDER_ID }}
-          filename: ${{ env.FILE_NAME }}
+          filename: ${{ env.FILE }}
           overwrite: "true"
 
