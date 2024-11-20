@@ -30,7 +30,7 @@ jobs:
       - name: Naming
         run: |
           if [ -n "${{ github.event.inputs.FILE_NAME }}" ]; then
-            mv "$(ls)" "${{ github.event.inputs.FILE_NAME }}"
+            mv -- "$(ls)" "${{ github.event.inputs.FILE_NAME }}"
             echo "FILE=${{ github.event.inputs.FILE_NAME }}" >> $GITHUB_ENV
           else
             FILE=$(ls)
