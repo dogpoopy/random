@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/netease_mpay_oversea__lvu_popup_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/netease_mpay_oversea__text_17" android:textColor="@color/netease_mpay_oversea__lvu_popup_confirm" android:gravity="center" android:id="@id/netease_mpay_oversea__confirm" android:padding="@dimen/netease_mpay_oversea__padding_5" android:layout_width="wrap_content" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_34" android:layout_marginLeft="@dimen/netease_mpay_oversea__lvu_popup_margin_horizontal" android:layout_marginRight="@dimen/netease_mpay_oversea__lvu_popup_margin_horizontal" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/netease_mpay_oversea__confirm">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/netease_mpay_oversea__one" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/netease_mpay_oversea__text_21" android:textColor="@color/netease_mpay_oversea__lvu_popup_text_select" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__selected_one" android:background="@color/netease_mpay_oversea__lvu_popup_select_background" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_32" android:singleLine="true" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/netease_mpay_oversea__two" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/netease_mpay_oversea__text_21" android:textColor="@color/netease_mpay_oversea__lvu_popup_text_select" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__selected_two" android:background="@color/netease_mpay_oversea__lvu_popup_select_background" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_32" android:singleLine="true" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/netease_mpay_oversea__three" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <TextView android:textSize="@dimen/netease_mpay_oversea__text_21" android:textColor="@color/netease_mpay_oversea__lvu_popup_text_select" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__selected_three" android:background="@color/netease_mpay_oversea__lvu_popup_select_background" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_32" android:singleLine="true" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

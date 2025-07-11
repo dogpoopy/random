@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/ntunisdk_scanner__popup_image_arrow_w" android:layout_height="@dimen/ntunisdk_scanner__popup_image_arrow_h" android:src="@drawable/ntunisdk_popup_image_arrow" />
+    <LinearLayout android:background="@drawable/ntunisdk_scanner_popup_image_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/iv_latest_image" android:background="@drawable/ntunisdk_scanner_popup_image_bg" android:layout_width="@dimen/ntunisdk_scanner__popup_image_w" android:layout_height="@dimen/ntunisdk_scanner__popup_image_h" android:layout_margin="@dimen/ntunisdk_scanner__popup_image_surround_padding" android:scaleType="centerCrop" />
+    </LinearLayout>
+</LinearLayout>

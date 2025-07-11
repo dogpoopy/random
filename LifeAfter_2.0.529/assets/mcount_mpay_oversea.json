@@ -1,0 +1,157 @@
+{
+  "channel_login": [
+    {
+      "clickName": "close",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__close"
+    },
+    {
+      "clickName": "back",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__back"
+    },
+    {
+      "clickName": "recover",
+      "eventType": "click",
+      "viewPath": ".*/ImageView\\[0\\]#netease_mpay_oversea__title_bar_restore_account"
+    }
+  ],
+  "quick_login_list": [
+    {
+      "clickName": "return",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__back"
+    }
+  ],
+  "child_protection": [
+    {
+      "clickName": "child_protection_age",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_date"
+    },
+    {
+      "clickName": "child_protection_age",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_date_text"
+    },
+    {
+      "clickName": "child_protection_region",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_region"
+    },
+    {
+      "clickName": "child_protection_continue",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__positive_button"
+    },
+    {
+      "clickName": "child_protection_close",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_close"
+    }
+  ],
+  "child_protection2": [
+    {
+      "clickName": "child_protection_region",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_region"
+    },
+    {
+      "clickName": "child_protection_close",
+      "eventType": "click",
+      "viewPath": ".*#netease_mpay_oversea__lvu_close"
+    }
+  ],
+  "set_guardian_email": [
+    {
+      "clickName": "enter_email",
+      "eventType": "click",
+      "viewPath": ".*/EditText\\[0\\]#netease_mpay_oversea__lvu_email"
+    },
+    {
+      "clickName": "next",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__positive_button"
+    },
+    {
+      "clickName": "close",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__lvu_close"
+    }
+  ],
+  "create_new_guest": [
+    {
+      "clickName": "continue",
+      "eventType": "click",
+      "viewPath": ".*/Button\\[0\\]#netease_mpay_oversea__positive_button"
+    }
+  ],
+  "bind_account": [
+    {
+      "clickName": "return",
+      "eventType": "click",
+      "viewPath": ".*/ImageView\\[0\\]#netease_mpay_oversea__title_bar_back"
+    }
+  ],
+  "switch_account": [
+    {
+      "clickName": "recover",
+      "eventType": "click",
+      "viewPath": ".*/ImageView\\[0\\]#netease_mpay_oversea__title_bar_restore_account"
+    },
+    {
+      "clickName": "more",
+      "eventType": "click",
+      "viewPath": ".*/LinearLayout\\[0\\]#netease_mpay_oversea__switch_more"
+    }
+  ],
+  "remember_account": [
+    {
+      "clickName": "remember_account_login",
+      "eventType": "click",
+      "viewPath": ".*/Button\\[0\\]#netease_mpay_oversea__positive_button"
+    },
+    {
+      "clickName": "remember_account_other",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__more"
+    },
+    {
+      "clickName": "remember_account_down",
+      "eventType": "click",
+      "viewPath": ".*/LinearLayout\\[0\\]#netease_mpay_oversea__account_content"
+    },
+    {
+      "clickName": "remember_account_close",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__close"
+    }
+  ],
+  "neteasegames_login": [
+    {
+      "clickName": "neteasegames_login_register",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__passport_register"
+    },
+    {
+      "clickName": "neteasegames_login_forget",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__passport_password_reset"
+    },
+    {
+      "clickName": "neteasegames_login_login",
+      "eventType": "click",
+      "viewPath": ".*/Button\\[0\\]#netease_mpay_oversea__positive_button"
+    },
+    {
+      "clickName": "neteasegames_login_back",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__back"
+    },
+    {
+      "clickName": "neteasegames_login_close",
+      "eventType": "click",
+      "viewPath": ".*/TextView\\[0\\]#netease_mpay_oversea__close"
+    }
+  ]
+}

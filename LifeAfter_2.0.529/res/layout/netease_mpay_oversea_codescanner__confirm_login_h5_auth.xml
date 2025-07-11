@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/netease_mpay_oversea__codescanner_confirm_msg_font_size" android:textColor="@color/netease_mpay_oversea__codescanner_confirm_msg_font_color" android:id="@id/netease_mpay_oversea__codescanner_confirm_tip2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/netease_mpay_oversea__codescanner_confirm_tip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/netease_mpay_oversea__codescanner_ll_login_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/netease_mpay_oversea__codescanner_space_30">
+        <ImageView android:layout_width="@dimen/netease_mpay_oversea__codescanner_space_30" android:layout_height="@dimen/netease_mpay_oversea__codescanner_space_30" android:src="@drawable/netease_mpay_oversea_codescanner__ic_default_avatar" />
+        <TextView android:textSize="@dimen/netease_mpay_oversea__codescanner_confirm_nickname_font_size" android:textStyle="bold" android:textColor="@color/netease_mpay_oversea__codescanner_confirm_nickname_font_color" android:id="@id/netease_mpay_oversea__codescanner_tv_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/netease_mpay_oversea__codescanner_space_15" />
+    </LinearLayout>
+</LinearLayout>

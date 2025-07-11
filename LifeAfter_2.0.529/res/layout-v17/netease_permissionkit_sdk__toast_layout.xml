@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:background="@drawable/netease_permissionkit_sdk__toast_background" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_alignLeft="@id/netease_permissionkit_sdk__toast_content" android:layout_alignTop="@id/netease_permissionkit_sdk__toast_content" android:layout_alignRight="@id/netease_permissionkit_sdk__toast_content" android:layout_alignBottom="@id/netease_permissionkit_sdk__toast_content" android:layout_alignStart="@id/netease_permissionkit_sdk__toast_content" android:layout_alignEnd="@id/netease_permissionkit_sdk__toast_content" />
+        <TextView android:textSize="15.0dip" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_permissionkit_sdk__toast_content" android:paddingLeft="20.0dip" android:paddingTop="13.5dip" android:paddingRight="20.0dip" android:paddingBottom="13.5dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="250.0dip" android:lineSpacingExtra="3.0dip" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+    </RelativeLayout>
+</FrameLayout>

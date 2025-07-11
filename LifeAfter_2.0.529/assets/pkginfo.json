@@ -1,0 +1,36 @@
+{
+  "pkginfo": [
+    {
+      "pkg_max_size": 2048, 
+      "pkgname": "script", 
+      "chunk_power": 9, 
+      "minipkg_max_size": 2048, 
+      "keep_open": 8
+    }, 
+    {
+      "pkg_max_size": 8192, 
+      "pkgname": "mesh", 
+      "minipkg_max_size": 512, 
+      "keep_open": 8
+    }, 
+    {
+      "pkg_max_size": 16384, 
+      "pkgname": "texture", 
+      "minipkg_max_size": 0, 
+      "lru_size": 65536, 
+      "keep_open": 8
+    },
+    {
+      "pkg_max_size": 8192, 
+      "pkgname": "shader", 
+      "minipkg_max_size": 512, 
+      "keep_open": 8
+    }, 
+    {
+      "pkg_max_size": 8192, 
+      "pkgname": "scene", 
+      "minipkg_max_size": 512, 
+      "keep_open": 8
+    }
+  ]
+}

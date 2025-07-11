@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nye varsler</item>
+        <item quantity="one">%d nytt varsel</item>
+    </plurals>
+    <plurals name="tw__time_hours">
+        <item quantity="other">%d t</item>
+        <item quantity="one">1 t</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="other">%d m</item>
+        <item quantity="one">1 m</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="other">%d s</item>
+        <item quantity="one">1 s</item>
+    </plurals>
+</resources>

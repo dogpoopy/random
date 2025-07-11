@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.AppCompat.Tooltip" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="com_facebook_auth_dialog_instructions_textview">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/com_facebook_device_auth_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:drawablePadding">12.0dip</item>
+        <item name="android:fontFamily">roboto</item>
+    </style>
+    <style name="tw__AttributionText">
+        <item name="android:textSize">@dimen/tw__text_size_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="tw__CompactAttributionLine">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/tw__compact_tweet_attribution_line_margin_right</item>
+        <item name="android:importantForAccessibility">noHideDescendants</item>
+    </style>
+    <style name="tw__QuoteAttributionLine">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/tw__quote_tweet_attribution_text_margin_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/tw__quote_tweet_attribution_text_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/tw__quote_tweet_attribution_text_margin_horizontal</item>
+        <item name="android:importantForAccessibility">noHideDescendants</item>
+    </style>
+    <style name="tw__TweetFullNameBase" parent="@style/tw__AttributionText">
+        <item name="android:textSize">@dimen/tw__text_size_large</item>
+        <item name="android:textColor">@color/tw__tweet_light_primary_text_color</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_marginTop">@dimen/tw__tweet_full_name_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/tw__tweet_full_name_margin_right</item>
+        <item name="android:drawablePadding">@dimen/tw__tweet_full_name_drawable_padding</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="tw__TweetRetweetedBy">
+        <item name="android:textSize">@dimen/tw__text_size_medium</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:focusable">false</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/tw__tweet_retweeted_by_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/tw__tweet_retweeted_by_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/tw__tweet_retweeted_by_margin_bottom</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/tw__ic_retweet_light</item>
+        <item name="android:drawablePadding">@dimen/tw__tweet_retweeted_by_drawable_padding</item>
+        <item name="android:drawableStart">@drawable/tw__ic_retweet_light</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="tw__TweetScreenName" parent="@style/tw__AttributionText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_marginTop">@dimen/tw__tweet_screen_name_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/tw__tweet_screen_name_margin_bottom</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="tw__TweetScreenName.Compact" parent="@style/tw__TweetScreenName">
+        <item name="android:textSize">@dimen/tw__text_size_medium</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingLeft">@dimen/tw__compact_tweet_screen_name_padding_left</item>
+        <item name="android:layout_width">@dimen/tw__compact_tweet_screen_name_layout_width</item>
+        <item name="android:layout_marginTop">@dimen/tw__compact_tweet_screen_name_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/tw__compact_tweet_screen_name_margin_bottom</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="tw__TweetText">
+        <item name="android:textSize">@dimen/tw__text_size_large</item>
+        <item name="android:textColor">@color/tw__tweet_light_primary_text_color</item>
+        <item name="android:textColorLink">@color/tw__tweet_action_color</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/tw__tweet_text_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/tw__tweet_text_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/tw__tweet_text_margin_right</item>
+        <item name="android:lineSpacingExtra">2.0dip</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <style name="tw__TweetTimestamp" parent="@style/tw__AttributionText">
+        <item name="android:ellipsize">none</item>
+        <item name="android:paddingLeft">@dimen/tw__tweet_timestamp_padding_left</item>
+        <item name="android:focusable">false</item>
+        <item name="android:layout_marginTop">@dimen/tw__tweet_timestamp_margin_top</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="tw__TweetTimestamp.Compact" parent="@style/tw__TweetTimestamp">
+        <item name="android:textSize">@dimen/tw__text_size_medium</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:layout_marginTop">@dimen/tw__compact_tweet_timestamp_margin_top</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+</resources>

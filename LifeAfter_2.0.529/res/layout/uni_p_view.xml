@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/uni_p_top_layout" android:layout_width="fill_parent" android:layout_height="@dimen/unisdk_protocol_view_top_height" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/uni_p_logo_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unisdk_protocol_logo" android:layout_centerInParent="true" />
+        <TextView android:textSize="10.0dip" android:textColor="#ff7a7a7a" android:gravity="center" android:id="@id/uni_p_page_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/uni_p_botttom_layout" android:layout_width="fill_parent" android:layout_height="@dimen/unisdk_protocol_view_bottom_height" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/uni_p_confirm_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+            <Button android:textSize="18.0dip" android:textColor="@color/unisdk_protocol_color_white" android:gravity="center" android:layout_gravity="center" android:id="@id/uni_p_confirm_btn" android:background="@drawable/unisdk_protocol_green_btn_selector" android:layout_width="@dimen/unisdk_protocol_view_btn_width" android:layout_height="fill_parent" android:text="@string/unisdk_protocol_confirm" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/uni_p_reject_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="5.0dip" android:layout_weight="1.0">
+            <Button android:textSize="18.0dip" android:textColor="@color/unisdk_protocol_color_white" android:layout_gravity="center" android:id="@id/uni_p_reject_btn" android:background="@drawable/unisdk_protocol_red_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/unisdk_protocol_reject" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/uni_p_accept_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:layout_weight="1.0">
+            <Button android:textSize="18.0dip" android:textColor="@color/unisdk_protocol_color_white" android:layout_gravity="center" android:id="@id/uni_p_accept_btn" android:background="@drawable/unisdk_protocol_green_btn_selector" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/unisdk_protocol_accept" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ff990000" android:gravity="center_horizontal" android:id="@id/protocol_agree_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="2.0dip" android:layout_above="@id/uni_p_botttom_layout" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/protocol_center_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/protocol_agree_tv" android:layout_below="@id/uni_p_top_layout">
+        <ImageView android:id="@id/uni_p_left_btn" android:paddingLeft="5.0dip" android:paddingTop="20.0dip" android:paddingRight="5.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unisdk_protocol_left" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/uni_p_right_btn" android:paddingLeft="5.0dip" android:paddingTop="20.0dip" android:paddingRight="5.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unisdk_protocol_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <FrameLayout android:background="#fff3f3f3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/uni_p_right_btn" android:layout_toRightOf="@id/uni_p_left_btn">
+            <com.netease.ntunisdk.external.protocol.view.ProtocolView android:id="@id/uni_p_tv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

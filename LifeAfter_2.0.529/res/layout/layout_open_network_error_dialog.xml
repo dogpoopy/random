@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/aweme_network_error_dialog_bg" android:paddingLeft="24.0dip" android:paddingTop="22.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0dip" android:textColor="@color/aweme_network_error_title_color" android:ellipsize="end" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="24.0dip" android:text="@string/aweme_open_network_error_title" android:singleLine="true" />
+    <TextView android:textSize="15.0dip" android:textColor="@color/aweme_network_error_content_color" android:id="@id/tv_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="24.0dip" android:text="@string/aweme_open_network_error_tips" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip">
+        <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/aweme_network_error_button_color" android:gravity="center" android:id="@id/tv_confirm" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="36.0dip" android:text="@string/aweme_open_network_error_confirm" />
+    </LinearLayout>
+</LinearLayout>

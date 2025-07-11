@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="abc_action_bar_home_description">Navigasi skrin utama</string>
+    <string name="abc_action_bar_up_description">Navigasi ke atas</string>
+    <string name="abc_action_menu_overflow_description">Lagi pilihan</string>
+    <string name="abc_action_mode_done">Selesai</string>
+    <string name="abc_activity_chooser_view_see_all">Lihat semua</string>
+    <string name="abc_activitychooserview_choose_application">Pilih apl</string>
+    <string name="abc_capital_off">MATI</string>
+    <string name="abc_capital_on">HIDUP</string>
+    <string name="abc_search_hint">Cari…</string>
+    <string name="abc_searchview_description_clear">Kosongkan pertanyaan</string>
+    <string name="abc_searchview_description_query">Pertanyaan carian</string>
+    <string name="abc_searchview_description_search">Cari</string>
+    <string name="abc_searchview_description_submit">Serah pertanyaan</string>
+    <string name="abc_searchview_description_voice">Carian suara</string>
+    <string name="abc_shareactionprovider_share_with">Kongsi dengan</string>
+    <string name="abc_shareactionprovider_share_with_application">Kongsi dengan %s</string>
+    <string name="abc_toolbar_collapse_description">Runtuhkan</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="netease_permissionkit_sdk__cancel">Batal</string>
+    <string name="netease_permissionkit_sdk__continue">Teruskan</string>
+    <string name="netease_permissionkit_sdk__goto_settings">Tetapan</string>
+    <string name="netease_permissionkit_sdk__goto_settings_tip">Sila dayakan kebenaran yang diperlukan dalam tetapan sistem.</string>
+    <string name="netease_permissionkit_sdk__refuse_tip">Ciri ini memerlukan kebenaran tambahan.</string>
+    <string name="aweme_loading">Memuatkan...</string>
+    <string name="aweme_open_error_tips_cancel">Batal</string>
+    <string name="aweme_open_network_error_confirm">OK</string>
+    <string name="aweme_open_network_error_tips">Ralat rangkaian. Sila cuba lagi.</string>
+    <string name="aweme_open_network_error_title">Kebenaran gagal</string>
+    <string name="aweme_open_ssl_cancel">Batal</string>
+    <string name="aweme_open_ssl_continue">Teruskan?</string>
+    <string name="aweme_open_ssl_error">Ralat sijil</string>
+    <string name="aweme_open_ssl_expired">Sijil tamat tempoh</string>
+    <string name="aweme_open_ssl_mismatched">Nama sijil tidak sepadan</string>
+    <string name="aweme_open_ssl_notyetvalid">Sijil belum lagi sah</string>
+    <string name="aweme_open_ssl_ok">OK</string>
+    <string name="aweme_open_ssl_untrusted">Sijil tidak dipercayai</string>
+    <string name="aweme_open_ssl_warning">Amaran</string>
+</resources>

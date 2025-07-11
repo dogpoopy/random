@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netease.mpay.oversea.scan.widgets.ProgressView android:layout_gravity="center" android:id="@id/progress" android:visibility="gone" android:layout_width="@dimen/netease_mpay_oversea__codescanner_padding_45" android:layout_height="@dimen/netease_mpay_oversea__codescanner_padding_45" />
+</FrameLayout>

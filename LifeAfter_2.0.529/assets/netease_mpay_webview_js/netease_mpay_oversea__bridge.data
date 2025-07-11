@@ -1,0 +1,183 @@
+/*
+ {"version_code" : "2.2.0"}
+*/
+
+window.NTCallBackList = {};
+window.UniSDKJSBridge = {
+    postMsgToNative:postMsgToNative,
+};
+
+String.prototype.hashCode = function() {
+    var hash = 0;
+    if (this.length == 0) return hash;
+    for (var index = 0; index < this.length; index++) {
+        var charactor = this.charCodeAt(index);
+        hash = ((hash << 5) - hash) + charactor;
+        hash = hash & hash;
+    }
+    return hash;
+};
+
+window.UniSDKNativeCallback = function(identifier, respJSONString) {
+	console.log("window.UniSDKNativeCallback, " + identifier + ", " + respJSONString);
+    callBack = window.NTCallBackList[identifier];
+    if (callBack) {
+        callBack.nativeCallback(respJSONString);
+        window.NTCallBackList[identifier] = null;
+        delete window.NTCallBackList[identifier];
+    }
+};
+
+function postMsgToNative(bridgeObjc) {
+    var dataString = encodeURIComponent(JSON.stringify(bridgeObjc.reqData));
+    var timestamp = Date.parse(new Date());
+    var identifier = (bridgeObjc.methodId + dataString + timestamp).hashCode().toString();
+    if (identifier.length > 0){
+        window.NTCallBackList[identifier] = bridgeObjc.callback;
+    }
+    var paramJson = {"method":"postMsgToNative", "arg1": {"methodId":bridgeObjc.methodId, "reqData":bridgeObjc.reqData, "identifier":identifier}};
+    alert((JSON.stringify(paramJson)));
+};
+
+var NTCallBackMethodManager = {
+    removeAllCallBacks: function(data){
+        window.NTCallBackList = {};
+    }
+};
+
+
+NMOJSBridge = {};
+
+function NMOJSBridgeCommon() {
+
+    if (NMOJSBridgeCommon._init == undefined) {
+        NMOJSBridgeCommon.prototype.onCopiedCallback = null;
+        NMOJSBridgeCommon.prototype.onSavedCallback = null;
+        NMOJSBridgeCommon.prototype.onNativeCallback = null;
+
+        NMOJSBridgeCommon.prototype.setCopyStatus = function (isSuccess) {
+            NMOJSBridgeCommon.prototype.onCopiedCallback(isSuccess);
+        };
+
+        NMOJSBridgeCommon.prototype.setSavedStatus = function (isSuccess, path) {
+            NMOJSBridgeCommon.prototype.onSavedCallback(isSuccess, path);
+        };
+
+        NMOJSBridgeCommon.prototype.getConfig = function (callback) {
+            callback.success(sdk_config_template);
+        };
+
+
+        NMOJSBridgeCommon.prototype.toast = function (msg) {
+
+            alert(JSON.stringify({
+                "method": "toast",
+                "arg1": msg
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.alert = function (msg) {
+
+            alert(JSON.stringify({
+                "method": "alert",
+                "arg1": msg
+            }));
+        };
+
+        //getSDKToken
+
+        NMOJSBridgeCommon.prototype.saveToClipboard = function (content, callback) {
+            NMOJSBridgeCommon.prototype.onCopiedCallback = callback;
+            alert(JSON.stringify({
+                "method": "saveToClipboard",
+                "arg1": content
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.onUserLogin = function (user) {
+
+            alert(JSON.stringify({
+                "method": "onUserLogin",
+                "arg1": user
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.screenshot = function (callback) {
+            NMOJSBridgeCommon.prototype.onSavedCallback = callback;
+            alert(JSON.stringify({
+                "method": "screenshot"
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.saveMigrateCode = function(code, callback) {
+            NMOJSBridgeCommon.prototype.onSavedCallback = callback;
+            alert(JSON.stringify({
+                                "method": "saveMigrateCode",
+                                "arg1":code
+             }));
+        };
+
+        NMOJSBridgeCommon.prototype.onVerify = function (data) {
+
+             alert(JSON.stringify({
+                 "method": "onVerify",
+                 "arg1": data
+             }));
+        };
+
+        NMOJSBridgeCommon.prototype.onSetSpwd = function (data) {
+
+              alert(JSON.stringify({
+                         "method": "onSetSpwd",
+                         "arg1": data
+              }));
+        };
+
+        NMOJSBridgeCommon.prototype.onPNLogin = function (data) {
+
+              alert(JSON.stringify({
+                         "method": "onPNLogin",
+                         "arg1": data
+              }));
+        };
+
+        NMOJSBridgeCommon.prototype.openLinkInNativeBrowser = function (data) {
+
+              alert(JSON.stringify({
+                         "method": "openLinkInNativeBrowser",
+                         "arg1": data
+              }));
+        };
+
+        NMOJSBridgeCommon.prototype.closeWindow = function () {
+
+            alert(JSON.stringify({
+                "method": "closeWindow"
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.onError = function (data) {
+
+            alert(JSON.stringify({
+                "method": "onError",
+                "arg1": data
+            }));
+        };
+
+        NMOJSBridgeCommon.prototype.onReady = function () {
+
+            alert(JSON.stringify({
+                "method": "onReady"
+            }));
+        };
+
+        NMOJSBridgeCommon._init = 1;
+    }
+};
+
+
+NMOJSBridge.Common = new NMOJSBridgeCommon();
+
+var NMOJSBridgeReadyEvent = document.createEvent('Events');
+NMOJSBridgeReadyEvent.initEvent("NMOJSBridgeReady", true, true);
+document.dispatchEvent(NMOJSBridgeReadyEvent);

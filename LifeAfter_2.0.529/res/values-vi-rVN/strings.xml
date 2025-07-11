@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="unisdk_protocol_accept">Chấp nhận</string>
+    <string name="unisdk_protocol_cancel">Hủy</string>
+    <string name="unisdk_protocol_confirm">Xác nhận</string>
+    <string name="unisdk_protocol_network_error">Mạng lỗi, vui lòng kiểm tra rồi thử lại?</string>
+    <string name="unisdk_protocol_reject">Từ chối</string>
+    <string name="unisdk_protocol_reject_confirm_back">Trở về</string>
+    <string name="unisdk_protocol_reject_confirm_msg">Nếu bạn từ chối Điều Khoản, bạn sẽ không thể chơi game. Xác nhận?</string>
+    <string name="unisdk_protocol_reject_confirm_ok">Đồng ý</string>
+    <string name="unisdk_protocol_retry">Thử lại</string>
+    <string name="unisdk_protocol_title">Sự thỏa thuận của người dùng</string>
+    <string name="aweme_loading">Đang tải...</string>
+    <string name="aweme_open_error_tips_cancel">Hủy</string>
+    <string name="aweme_open_network_error_confirm">OK</string>
+    <string name="aweme_open_network_error_tips">Lỗi mạng. Vui lòng thử lại.</string>
+    <string name="aweme_open_network_error_title">Ủy quyền thất bại</string>
+    <string name="aweme_open_ssl_cancel">Hủy</string>
+    <string name="aweme_open_ssl_continue">Tiếp tục?</string>
+    <string name="aweme_open_ssl_error">Lỗi chứng chỉ</string>
+    <string name="aweme_open_ssl_expired">Chứng chỉ đã hết hạn</string>
+    <string name="aweme_open_ssl_mismatched">Tên chứng chỉ không khớp</string>
+    <string name="aweme_open_ssl_notyetvalid">Chứng chỉ chưa hợp lệ</string>
+    <string name="aweme_open_ssl_ok">OK</string>
+    <string name="aweme_open_ssl_untrusted">Chứng chỉ không đáng tin cậy</string>
+    <string name="aweme_open_ssl_warning">Cảnh báo</string>
+</resources>

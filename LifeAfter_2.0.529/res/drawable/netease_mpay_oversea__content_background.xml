@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/netease_mpay_oversea__radius_3" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/netease_mpay_oversea__usercenter_bg" />
+    </item>
+</layer-list>

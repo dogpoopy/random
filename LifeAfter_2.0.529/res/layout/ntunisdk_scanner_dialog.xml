@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/root_view" android:background="@drawable/ntunisdk_scanner_dialog_background" android:layout_width="@dimen/ntunisdk_scanner_alert_width" android:layout_height="wrap_content" android:isScrollContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/ntunisdk_scanner_alert_font_size" android:textColor="@color/ntunisdk_scanner_alert_font_color" android:gravity="center" android:id="@id/ntunisdk_scanner_alert_message" android:paddingLeft="@dimen/ntunisdk_scanner_padding_20" android:paddingTop="@dimen/ntunisdk_scanner_padding_45" android:paddingRight="@dimen/ntunisdk_scanner_padding_20" android:paddingBottom="@dimen/ntunisdk_scanner_padding_45" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:background="@color/ntunisdk_scanner_alert_divider" android:layout_width="fill_parent" android:layout_height="@dimen/ntunisdk_scanner_alert_divider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ntunisdk_scanner_button_height_53">
+        <TextView android:textSize="@dimen/ntunisdk_scanner_alert_font_size" android:textStyle="bold" android:textColor="@color/ntunisdk_scanner_alert_btn_font_color" android:gravity="center" android:id="@id/ntunisdk_scanner_alert_btn_negative" android:layout_width="0.0dip" android:layout_height="@dimen/ntunisdk_scanner_button_height_53" android:layout_weight="1.0" />
+        <View android:id="@id/ntunisdk_scanner_alert_sep" android:background="@color/ntunisdk_scanner_alert_divider" android:layout_width="@dimen/ntunisdk_scanner_alert_divider" android:layout_height="fill_parent" />
+        <TextView android:textSize="@dimen/ntunisdk_scanner_alert_font_size" android:textStyle="bold" android:textColor="@color/ntunisdk_scanner_alert_btn_font_color" android:gravity="center" android:id="@id/ntunisdk_scanner_alert_btn_positive" android:layout_width="0.0dip" android:layout_height="@dimen/ntunisdk_scanner_button_height_53" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

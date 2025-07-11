@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/ntunisdk_head_rlt" android:background="@color/ntunisdk_head_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/ntunisdk_head_text_size" android:textColor="@color/ntunisdk_head_text" android:layout_gravity="center" android:id="@id/ntunisdk_scanner_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ntunisdk_scan_head_tv" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ntunisdk_scanner_toolbar_back" android:paddingLeft="12.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ntunisdk_back" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <SurfaceView android:layout_gravity="center" android:id="@id/ntunisdk_scanner_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.netease.ntunisdk.zxing.client.android.ViewfinderView android:layout_gravity="center" android:id="@id/ntunisdk_viewfinder_content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:layout_gravity="right|center" android:orientation="vertical" android:id="@id/btns_layout" android:visibility="visible" android:layout_width="@dimen/ntunisdk_cature_view__btns_layout_w" android:layout_height="@dimen/ntunisdk_cature_view__btns_layout_h">
+            <ImageView android:id="@id/open_album_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/ntunisdk_cature_view__btns_margin_vertical" android:src="@drawable/ntunisdk_open_album_selector" />
+            <ImageView android:id="@id/open_flash_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ntunisdk_cature_view__btns_margin_vertical" android:src="@drawable/ntunisdk_open_flash_selector" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

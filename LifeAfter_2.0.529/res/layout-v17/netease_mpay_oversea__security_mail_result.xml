@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/netease_mpay_oversea__title_bar" android:background="@drawable/netease_mpay_oversea__usercenter_nav_bg" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__title_bar_height">
+        <TextView android:textSize="@dimen/netease_mpay_oversea__title_bar_font" android:textStyle="bold" android:textColor="@color/netease_mpay_oversea__usercenter_nav_title" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__title_bar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textDirection="locale" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/netease_mpay_oversea__result_icon" android:layout_width="@dimen/netease_mpay_oversea__icon_50" android:layout_height="@dimen/netease_mpay_oversea__icon_50" android:layout_marginTop="@dimen/netease_mpay_oversea__uc_se_success_margin_top" android:src="@drawable/netease_mpay_oversea__usercenter_security_email_success" />
+    <TextView android:textSize="@dimen/netease_mpay_oversea__text_15" android:textColor="@color/netease_mpay_oversea__popup_inputbox_text" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/netease_mpay_oversea__margin_15" android:textDirection="locale" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <Button android:textSize="@dimen/netease_mpay_oversea__text_16" android:textColor="@color/netease_mpay_oversea__usercenter_start_btn" android:gravity="center" android:layout_gravity="center|bottom" android:id="@id/netease_mpay_oversea__positive_button" android:background="@drawable/netease_mpay_oversea__usercenter_start_btn" android:layout_width="@dimen/netease_mpay_oversea__button_width_260" android:layout_height="@dimen/netease_mpay_oversea__button_height_40" android:layout_marginBottom="@dimen/netease_mpay_oversea__margin_20" android:text="@string/netease_mpay_oversea__confirm_sure" />
+    </FrameLayout>
+</LinearLayout>

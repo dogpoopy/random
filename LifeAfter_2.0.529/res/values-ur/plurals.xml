@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d نئی اطلاعات</item>
+        <item quantity="one">%d نئی اطلاع</item>
+    </plurals>
+    <plurals name="tw__time_hours">
+        <item quantity="other">%d گھنٹے</item>
+        <item quantity="one">1 گھنٹہ</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="other">%dمنٹ</item>
+        <item quantity="one">1منٹ</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="other">%dسیکنڈ</item>
+        <item quantity="one">پہلا</item>
+    </plurals>
+</resources>

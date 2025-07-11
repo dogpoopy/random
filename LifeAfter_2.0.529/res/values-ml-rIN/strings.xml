@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="abc_action_bar_home_description">ഹോമിലേക്ക് നാവിഗേറ്റുചെയ്യുക</string>
+    <string name="abc_action_bar_up_description">മുകളിലേക്ക് നാവിഗേറ്റുചെയ്യുക</string>
+    <string name="abc_action_menu_overflow_description">കൂടുതല്‍ ഓപ്‌ഷനുകള്‍</string>
+    <string name="abc_action_mode_done">പൂർത്തിയാക്കി</string>
+    <string name="abc_activity_chooser_view_see_all">എല്ലാം കാണുക</string>
+    <string name="abc_activitychooserview_choose_application">ഒരു അപ്ലിക്കേഷൻ തിരഞ്ഞെടുക്കുക</string>
+    <string name="abc_capital_off">ഓഫ്</string>
+    <string name="abc_capital_on">ഓൺ</string>
+    <string name="abc_search_hint">തിരയുക…</string>
+    <string name="abc_searchview_description_clear">അന്വേഷണം മായ്‌ക്കുക</string>
+    <string name="abc_searchview_description_query">തിരയൽ അന്വേഷണം</string>
+    <string name="abc_searchview_description_search">തിരയൽ</string>
+    <string name="abc_searchview_description_submit">അന്വേഷണം സമർപ്പിക്കുക</string>
+    <string name="abc_searchview_description_voice">ശബ്ദ തിരയൽ</string>
+    <string name="abc_shareactionprovider_share_with">ഇവരുമായി പങ്കിടുക</string>
+    <string name="abc_shareactionprovider_share_with_application">%s എന്നതുമായി പങ്കിടുക</string>
+    <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="aweme_loading">ലോ‍ഡ് ചെയ്യുന്നു...</string>
+    <string name="aweme_open_error_tips_cancel">റദ്ദാക്കുക</string>
+    <string name="aweme_open_network_error_confirm">ശരി</string>
+    <string name="aweme_open_network_error_tips">നെറ്റ്‍വര്‍ക്ക് പിശക്. ദയവായി വീണ്ടും ശ്രമിക്കുക.</string>
+    <string name="aweme_open_network_error_title">അംഗീകരണം പരാജയപ്പെട്ടു</string>
+    <string name="aweme_open_ssl_cancel">റദ്ദാക്കുക</string>
+    <string name="aweme_open_ssl_continue">തുടരുക?</string>
+    <string name="aweme_open_ssl_error">സർട്ടിഫിക്കറ്റ് പിശക്</string>
+    <string name="aweme_open_ssl_expired">സർട്ടിഫിക്കറ്റ് കാലഹരണപ്പെട്ടു</string>
+    <string name="aweme_open_ssl_mismatched">സർട്ടിഫിക്കറ്റ് പേരിലുള്ള പൊരുത്തക്കേട്</string>
+    <string name="aweme_open_ssl_notyetvalid">സർട്ടിഫിക്കറ്റിന് ഇപ്പോഴും സാധുതയില്ല</string>
+    <string name="aweme_open_ssl_ok">ശരി</string>
+    <string name="aweme_open_ssl_untrusted">സർട്ടിഫിക്കറ്റ് വിശ്വസനീയമല്ല</string>
+    <string name="aweme_open_ssl_warning">മുന്നറിയിപ്പ്</string>
+</resources>

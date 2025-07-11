@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="abc_action_bar_home_description">ਹੋਮ ਨੈਵੀਗੇਟ ਕਰੋ</string>
+    <string name="abc_action_bar_up_description">ਉੱਪਰ ਨੈਵੀਗੇਟ ਕਰੋ</string>
+    <string name="abc_action_menu_overflow_description">ਹੋਰ ਚੋਣਾਂ</string>
+    <string name="abc_action_mode_done">ਹੋ ਗਿਆ</string>
+    <string name="abc_activity_chooser_view_see_all">ਸਭ ਦੇਖੋ</string>
+    <string name="abc_activitychooserview_choose_application">ਇੱਕ ਐਪ ਚੁਣੋ</string>
+    <string name="abc_capital_off">ਬੰਦ</string>
+    <string name="abc_capital_on">ਤੇ</string>
+    <string name="abc_search_hint">ਖੋਜ…</string>
+    <string name="abc_searchview_description_clear">ਸਵਾਲ ਹਟਾਓ</string>
+    <string name="abc_searchview_description_query">ਸਵਾਲ ਖੋਜੋ</string>
+    <string name="abc_searchview_description_search">ਖੋਜੋ</string>
+    <string name="abc_searchview_description_submit">ਸਵਾਲ ਪ੍ਰਸਤੁਤ ਕਰੋ</string>
+    <string name="abc_searchview_description_voice">ਵੌਇਸ ਖੋਜ</string>
+    <string name="abc_shareactionprovider_share_with">ਇਸ ਨਾਲ ਸ਼ੇਅਰ ਕਰੋ</string>
+    <string name="abc_shareactionprovider_share_with_application">%s ਨਾਲ ਸ਼ੇਅਰ ਕਰੋ</string>
+    <string name="abc_toolbar_collapse_description">ਨਸ਼ਟ ਕਰੋ</string>
+    <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
+    <string name="aweme_loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</string>
+    <string name="aweme_open_error_tips_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="aweme_open_network_error_confirm">OK</string>
+    <string name="aweme_open_network_error_tips">ਨੈੱਟਵਰਕ ਤਰੁੱਟੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string name="aweme_open_network_error_title">ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ</string>
+    <string name="aweme_open_ssl_cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="aweme_open_ssl_continue">ਜਾਰੀ ਰੱਖਣਾ ਹੈ?</string>
+    <string name="aweme_open_ssl_error">ਪ੍ਰਮਾਣ-ਪੱਤਰ ਸਬੰਧੀ ਤਰੁੱਟੀ</string>
+    <string name="aweme_open_ssl_expired">ਪ੍ਰਮਾਣ-ਪੱਤਰ ਦੀ ਮਿਆਦ ਸਮਾਪਤ</string>
+    <string name="aweme_open_ssl_mismatched">ਪ੍ਰਮਾਣ-ਪੱਤਰ ਨਾਮ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ</string>
+    <string name="aweme_open_ssl_notyetvalid">ਪ੍ਰਮਾਣ-ਪੱਤਕਰ ਹਾਲੇ ਵੈਧ ਨਹੀਂ ਹੈ</string>
+    <string name="aweme_open_ssl_ok">OK</string>
+    <string name="aweme_open_ssl_untrusted">ਪ੍ਰਮਾਣ-ਪੱਤਰ ਭਰੋਸੇਯੋਗ ਨਹੀਂ ਹੈ</string>
+    <string name="aweme_open_ssl_warning">ਚਿਤਾਵਨੀ</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/netease_mpay_codescanner__login_scan_code_toast_bg_color" />
+            <corners android:radius="@dimen/netease_mpay_oversea__codescanner_login_scan_code_toast_bg_radius_size" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/netease_mpay_oversea__text_16" android:textColor="@color/netease_mpay_oversea__lvu_popup_text_normal" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__default" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_32" android:textDirection="locale" />
+</FrameLayout>

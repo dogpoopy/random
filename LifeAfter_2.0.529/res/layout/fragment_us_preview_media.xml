@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rv_us_pic_lib_preview_bg" android:background="@color/pic_lib_white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/vp_us_pic_lib_preview_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rv_us_pic_lib_preview_top" android:background="@color/pic_lib_white" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_us_pic_lib_preview_back" android:background="@drawable/ripple_us_picedit_default" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_alignParentStart="true">
+            <ImageView android:id="@id/iv_us_pic_lib_preview_return" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/svg_us_picedit_return" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/fl_us_pic_lib_preview_pager_selected" android:background="@drawable/ripple_us_picedit_default" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+            <TextView android:textSize="15.0sp" android:textColor="@color/pic_lib_white" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_us_pic_lib_preview_pager_selected_index" android:background="@drawable/selector_us_picedit_default" android:layout_width="22.0dip" android:layout_height="22.0dip" />
+        </FrameLayout>
+        <View android:background="@color/pic_lib_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_us_pic_lib_preview_func" android:background="@color/pic_lib_white_alpha" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="15.0sp" android:textColor="@color/pic_lib_black" android:gravity="center" android:id="@id/tv_us_pic_lib_edit" android:background="@drawable/ripple_us_picedit_default" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" android:text="@string/picedit_edit" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+        <Button android:textSize="15.0sp" android:textColor="@color/pic_lib_white_alpha" android:gravity="center" android:id="@id/bt_us_pic_lib_preview_send" android:background="@drawable/shape_us_picedit_not_over" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="10.0dip" android:text="@string/picedit_finish" android:textAllCaps="false" android:paddingStart="7.0dip" android:paddingEnd="7.0dip" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" android:stateListAnimator="@null" />
+        <View android:id="@id/v_us_pic_lib_preview_func_top" android:background="@color/pic_lib_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/fl_us_pic_lib_preview_rv_bg" android:background="@color/pic_lib_white_alpha" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/rl_us_pic_lib_preview_func">
+        <View android:background="@color/pic_lib_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_us_pic_lib_preview_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="5.0dip" />
+    </FrameLayout>
+</RelativeLayout>

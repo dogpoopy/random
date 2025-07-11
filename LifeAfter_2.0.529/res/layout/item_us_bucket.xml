@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/ripple_us_picedit_default_rec" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/v_pic_lib_bucket_bg" android:background="@color/pic_lib_bucket_gray" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.cardview.widget.CardView android:id="@id/cv_us_pic_lib_bucket_container" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_centerVertical="true" android:layout_marginStart="20.0dip" app:cardCornerRadius="3.0dip" app:cardElevation="0.0dip">
+        <com.netease.ntunisdk.piclib.view.TagImageView android:id="@id/iv_us_pic_lib_bucket" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/pic_lib_text_main_color" android:id="@id/tv_us_pic_lib_bucket_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_alignTop="@id/cv_us_pic_lib_bucket_container" android:layout_marginStart="20.0dip" android:layout_toEndOf="@id/cv_us_pic_lib_bucket_container" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/pic_lib_text_minor_color" android:id="@id/tv_us_pic_lib_bucket_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/tv_us_pic_lib_bucket_name" android:layout_marginStart="20.0dip" android:layout_toEndOf="@id/cv_us_pic_lib_bucket_container" />
+    <ImageView android:id="@id/iv_us_pic_lib_bucket_sel" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/png_us_picedit_bucket_sel" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+    <View android:background="@color/pic_lib_bucket_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

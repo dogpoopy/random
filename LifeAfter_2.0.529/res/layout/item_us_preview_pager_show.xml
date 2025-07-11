@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_us_pic_lib_preview_pager_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <SurfaceView android:id="@id/sv_us_pic_lib_preview_pager_player" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <com.netease.ntunisdk.piclib.view.PreviewImageView android:id="@id/piv_us_pic_lib_preview_pager_show" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    <FrameLayout android:id="@id/fl_us_pic_lib_preview_video_cover" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_us_pic_lib_preview_video_play" android:focusable="true" android:clickable="true" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/png_us_picedit_video_play" />
+    </FrameLayout>
+</RelativeLayout>

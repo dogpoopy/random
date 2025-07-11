@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#b3000000" android:paddingBottom="20.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_us_pic_text_input_cancel" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="20.0dip" android:text="@string/picedit_cancel" android:layout_alignParentTop="true" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="20.0dip" />
+    <Button android:textColor="@color/pic_lib_white" android:id="@id/bt_us_pic_text_input_done" android:background="@drawable/shape_us_picedit_over" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginTop="20.0dip" android:text="@string/picedit_finish" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+    <ScrollView android:id="@id/sv_us_pic_text_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/tv_us_pic_text_input_cancel">
+        <EditText android:textSize="18.0sp" android:textStyle="bold" android:id="@id/et_us_pic_text_input" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="120" android:textCursorDrawable="@null" android:layout_marginStart="26.0dip" android:layout_marginEnd="26.0dip" />
+    </ScrollView>
+    <com.netease.ntunisdk.piclib.view.ColorMagazineView android:id="@id/cmv_us_pic_text_color_magazine_dynamic" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <com.netease.ntunisdk.piclib.view.ColorMagazineView android:id="@id/cmv_us_pic_text_color_magazine_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

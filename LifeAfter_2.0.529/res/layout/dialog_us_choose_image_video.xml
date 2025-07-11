@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_us_picedit_choose" android:layout_width="220.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="@color/color_black" android:gravity="center" android:id="@id/tv_dialog_take_photo" android:background="@drawable/ripple_us_picedit_default_rec_arc_top" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/picedit_take_photo" />
+    <View android:id="@id/v_dialog_take_photo_line" android:background="@color/color_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/color_black" android:gravity="center" android:id="@id/tv_dialog_take_video" android:background="@drawable/ripple_us_picedit_default_rec" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/picedit_take_video" />
+    <View android:id="@id/v_dialog_take_video_line" android:background="@color/color_gray" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/color_black" android:gravity="center" android:id="@id/tv_dialog_open_camera_cancel" android:background="@drawable/ripple_us_picedit_default_rec_arc_bottom" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="@string/picedit_cancel" />
+</LinearLayout>

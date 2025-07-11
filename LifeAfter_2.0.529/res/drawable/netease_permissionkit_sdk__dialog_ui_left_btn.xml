@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:id="@id/permission_btn_01_pressed" android:drawable="@drawable/netease_permissionkit_sdk__permission_btn_01_pressed" />
+    <item android:id="@drawable/netease_permissionkit_sdk__permission_btn_01_normal" android:drawable="@drawable/netease_permissionkit_sdk__permission_btn_01_normal" />
+</selector>

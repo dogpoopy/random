@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/ntunisdk_quick_qr_icon_scan" android:enabled="true" android:shortcutId="shortcut_id_quick_qr" android:shortcutShortLabel="@string/ntunisdk_scan_quick_qr" android:shortcutLongLabel="@string/ntunisdk_scan_quick_qr_long" android:shortcutDisabledMessage="@string/ntunisdk_scan_quick_qr_disabled">
+        <intent android:targetPackage="com.netease.ntunisdk.example.common" android:action="com.netease.ntunisdk.shortcuts.intent.action.QUICK_QR" android:targetClass="com.netease.ntunisdk.shortcuts.ShortcutRouteActivity" />
+    </shortcut>
+</shortcuts>

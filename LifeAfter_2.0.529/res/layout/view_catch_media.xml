@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.netease.ntunisdk.piclib.camera.CatchMediaCircleView android:layout_gravity="center" android:id="@id/iv_uni_piclib_catch_media_back_circle" android:layout_width="@dimen/uni_piclib_catch_media_circle_back_small_diameter_dp" android:layout_height="@dimen/uni_piclib_catch_media_circle_back_small_diameter_dp" />
+    <com.netease.ntunisdk.piclib.camera.CircleProgressView android:layout_gravity="center" android:id="@id/cpv_uni_piclib_catch_media_progress" android:visibility="gone" android:layout_width="@dimen/uni_piclib_catch_media_circle_back_big_diameter_dp" android:layout_height="@dimen/uni_piclib_catch_media_circle_back_big_diameter_dp" />
+    <com.netease.ntunisdk.piclib.camera.CatchMediaCircleView android:layout_gravity="center" android:id="@id/iv_uni_piclib_catch_media_front_circle" android:layout_width="@dimen/uni_piclib_catch_media_circle_front_big_diameter_dp" android:layout_height="@dimen/uni_piclib_catch_media_circle_front_big_diameter_dp" />
+</FrameLayout>

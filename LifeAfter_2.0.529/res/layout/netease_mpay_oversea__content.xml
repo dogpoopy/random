@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/netease_mpay_oversea__uc" android:background="@drawable/netease_mpay_oversea__usercenter_bg_large" android:visibility="gone" android:layout_width="@dimen/netease_mpay_oversea__uc_bg_width" android:layout_height="@dimen/netease_mpay_oversea__uc_bg_height">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/netease_mpay_oversea__usercenter_bg" android:layout_width="@dimen/netease_mpay_oversea__uc_width" android:layout_height="@dimen/netease_mpay_oversea__uc_height">
+            <FrameLayout android:id="@id/netease_mpay_oversea__uc_navigation" android:background="@drawable/netease_mpay_oversea__usercenter_menu_bg" android:layout_width="@dimen/netease_mpay_oversea__uc_titlebar_width" android:layout_height="@dimen/netease_mpay_oversea__uc_titlebar_height" />
+            <FrameLayout android:id="@id/netease_mpay_oversea__uc_content" android:layout_width="@dimen/netease_mpay_oversea__uc_content_width" android:layout_height="@dimen/netease_mpay_oversea__uc_content_height" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/netease_mpay_oversea__full_content" android:background="@drawable/netease_mpay_oversea__login_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

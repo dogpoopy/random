@@ -1,0 +1,132 @@
+{
+    "location": "cn",
+    "logupload": true,
+    "iphash": {
+        "continent": {
+            "australia": "au",
+            "oceania": "au",
+            "europe": "eu",
+            "america": "us",
+            "northamerica": "us",
+            "southamerica": "us"
+        },
+        "country": {
+            "china": "cn",
+            "hongkong": "hongkong",
+            "macao": "hongkong",
+            "japan": "jp",
+            "republicofkorea": "kr",
+            "northkorea": "kr",
+            "southkorea": "kr",
+            "taiwan": "taiwan",
+            "singapore": "sg",
+            "malaysia": "sg",
+            "thailand": "sg",
+            "vietnam": "hongkong",
+            "cambodia": "hongkong",
+            "indonesia": "sg",
+            "india": "sg",
+            "laos": "hongkong",
+            "philippines": "sg",
+            "myanmar": "sg",
+            "maldives": "sg",
+            "unitedstates": "us",
+            "brazil": "us",
+            "canada": "us",
+            "argentina": "us",
+            "kazakhstan": "eu"
+        }
+    },
+    "ipv6hash": {
+        "continent": [],
+        "country": {
+            "china": "v6"
+        }
+    },
+    "isphash": {
+        "cmcc": {
+            "_all": ""
+        },
+        "cucc": {
+            "_all": ""
+        },
+        "ctcc": {
+            "_all": ""
+        },
+        "_all": {
+            "_all": ""
+        }
+    },
+    "timezonehash": {
+        "continent": {
+            "australia": "au",
+            "antarctica": "au",
+            "europe": "eu",
+            "america": "us"
+        },
+        "country": {
+            "taipei": "taiwan",
+            "hongkong": "hongkong",
+            "macau": "hongkong",
+            "brunei": "hongkong",
+            "vientiane": "hongkong",
+            "manila": "hongkong",
+            "manado": "hongkong",
+            "pyongyang": "kr",
+            "seoul": "kr",
+            "singapore": "sg",
+            "mataram": "sg",
+            "kualalumpur": "sg",
+            "jakarta": "sg",
+            "philippines": "sg",
+            "denpasar": "sg",
+            "ende": "sg",
+            "raba": "sg",
+            "singaraja": "sg",
+            "kupang": "sg",
+            "makassar": "sg",
+            "rangoon": "sg",
+            "maldives": "sg",
+            "kuching": "sg",
+            "tokyo": "jp"
+        },
+        "timezone": {
+            "JST": "jp",
+            "32": "jp",
+            "+7": "sg",
+            "+8": "cn",
+            "+9": "jp",
+            "default": "us"
+        }
+    },
+    "udpconfig": {
+        "package": 1,
+        "count": 4
+    },
+    "ispconfig": {
+        "probe": false,
+        "harbor": false
+    },
+    "ratioconfig": {
+        "isp": 0,
+        "ipv6": 1
+    },
+    "probeconfig": {
+        "ios": {
+            "_all": "ios"
+        },
+        "android": {
+            "_all": "android"
+        }
+    },
+    "udphash": {
+        "us": "52.8.108.231:9999",
+        "sg": "3.0.228.194:9999",
+        "au": "13.237.191.122:9999",
+        "eu": "18.194.13.31:9999",
+        "cn": "59.111.1.241:9999",
+        "jp": "54.65.121.50:9999",
+        "taiwan": "35.234.24.55:9999",
+        "hongkong": "18.162.199.255:9999"
+    }
+}

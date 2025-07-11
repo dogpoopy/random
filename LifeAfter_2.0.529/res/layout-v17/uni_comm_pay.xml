@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/uni_comm_white_bkg" android:padding="10.0dip" android:layout_width="290.0dip" android:layout_height="340.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="368.0">
+        <RelativeLayout android:layout_width="270.0dip" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="#ff313233" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="支付" android:layout_centerHorizontal="true" />
+            <ImageButton android:id="@id/uni_comm_ic_cancel_pay" android:background="@drawable/uni_comm_ibtn_close" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <TextView android:textSize="14.0sp" android:textColor="#ff8e9094" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="商品价格" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="25.0sp" android:textColor="#ff313233" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¥" />
+            <TextView android:textSize="25.0sp" android:textColor="#ff313233" android:id="@id/uni_comm_tv_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="28.68" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ffe8e9eb" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_weight="536.0" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ff8e9094" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="商品名称：" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff313233" android:id="@id/uni_comm_tv_product_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="暑期优惠礼包" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="#ff8e9094" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="    商品ID：" />
+            <TextView android:textSize="14.0sp" android:textColor="#ff313233" android:id="@id/uni_comm_tv_pid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 1654887456004558" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0sp">
+            <Button android:textSize="15.0sp" android:textColor="@android:color/white" android:id="@id/uni_comm_btn_order_suc" android:background="@drawable/uni_comm_btn" android:layout_width="120.0dip" android:layout_height="38.0dip" android:text="支付成功" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+            <Button android:textSize="15.0sp" android:textColor="@android:color/white" android:id="@id/uni_comm_btn_order_fail" android:background="@drawable/uni_comm_btn" android:layout_width="120.0dip" android:layout_height="38.0dip" android:text="支付失败" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+            <Button android:textSize="15.0sp" android:textColor="@android:color/white" android:id="@id/uni_comm_btn_order_unknown" android:background="@drawable/uni_comm_btn" android:layout_width="120.0dip" android:layout_height="38.0dip" android:text="支付未知" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

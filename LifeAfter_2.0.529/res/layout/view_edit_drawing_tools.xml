@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <com.netease.ntunisdk.piclib.view.ColorMagazineView android:layout_gravity="center_vertical" android:id="@id/cmv_us_pic_lib_edit_draw_color_magazine" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="17.5dip" android:layout_toStartOf="@id/iv_us_pic_lib_edit_draw_revoke" />
+        <ImageView android:id="@id/iv_us_pic_lib_edit_draw_revoke" android:background="@drawable/ripple_us_picedit_edit_rec" android:padding="14.0dip" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/png_us_edit_undo" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

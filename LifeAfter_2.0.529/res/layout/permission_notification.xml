@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="#ff424242" android:padding="10.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="160.0dip" android:layout_marginTop="120.0dip" android:layout_marginRight="160.0dip" android:layout_marginBottom="120.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/permission_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="12.0dip" android:textColor="#ffcfcfcf" android:layout_gravity="center_horizontal" android:id="@id/permission_notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" />
+    <RelativeLayout android:id="@id/permission_func" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="10.0dip" android:id="@id/permission_center_flag" android:visibility="invisible" android:layout_width="120.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="15.0dip" android:textColor="#ff2fac47" android:id="@id/permission_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_toLeftOf="@id/permission_center_flag" />
+        <TextView android:textSize="15.0dip" android:textColor="#ff2fac47" android:id="@id/permission_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_toRightOf="@id/permission_center_flag" />
+    </RelativeLayout>
+    <TextView android:textSize="15.0dip" android:textColor="#ff2fac47" android:layout_gravity="center_horizontal" android:id="@id/permission_go_next" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="uni_gm_img_pick_dlg_items">
+        <item>手机相册</item>
+        <item>相机拍照</item>
+    </string-array>
+</resources>

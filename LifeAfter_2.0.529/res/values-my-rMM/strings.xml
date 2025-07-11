@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="status_bar_notification_info_overflow">၉၉၉+</string>
+    <string name="abc_action_bar_home_description">မူလနေရာကို သွားရန်</string>
+    <string name="abc_action_bar_up_description">အပေါ်သို့သွားရန်</string>
+    <string name="abc_action_menu_overflow_description">ပိုမိုရွေးချယ်စရာများ</string>
+    <string name="abc_action_mode_done">ပြီးဆုံးပါပြီ</string>
+    <string name="abc_activity_chooser_view_see_all">အားလုံးကို ကြည့်ရန်</string>
+    <string name="abc_activitychooserview_choose_application">အပလီကေးရှင်း တစ်ခုခုကို ရွေးချယ်ပါ</string>
+    <string name="abc_capital_off">ပိတ်</string>
+    <string name="abc_capital_on">ဖွင့်</string>
+    <string name="abc_search_hint">ရှာဖွေပါ...</string>
+    <string name="abc_searchview_description_clear">ရှာစရာ အချက်အလက်များ ရှင်းလင်းရန်</string>
+    <string name="abc_searchview_description_query">ရှာစရာ အချက်အလက်နေရာ</string>
+    <string name="abc_searchview_description_search">ရှာဖွေရန်</string>
+    <string name="abc_searchview_description_submit">ရှာဖွေစရာ အချက်အလက်ကို အတည်ပြုရန်</string>
+    <string name="abc_searchview_description_voice">အသံဖြင့် ရှာဖွေခြင်း</string>
+    <string name="abc_shareactionprovider_share_with">မျှဝေဖို့ ရွေးပါ</string>
+    <string name="abc_shareactionprovider_share_with_application">%s ကို မျှဝေပါရန်</string>
+    <string name="abc_toolbar_collapse_description">ခေါက်ရန်</string>
+    <string name="abc_action_bar_home_description_format">%1$s၊ %2$s</string>
+    <string name="abc_action_bar_home_subtitle_description_format">%1$s ၊ %2$s ၊ %3$s</string>
+    <string name="aweme_loading">လုပ်ဆောင်နေဆဲ...</string>
+    <string name="aweme_open_error_tips_cancel">ဖျက်သိမ်းပါ</string>
+    <string name="aweme_open_network_error_confirm">အိုကေ</string>
+    <string name="aweme_open_network_error_tips">ကွန်ရက်မှားယွင်းချက်၊ ပြန်ကြိုးစားကြည့်ပါ။</string>
+    <string name="aweme_open_network_error_title">ခွင့်ပြုချက်ပေးခြင်း မအောင်မြင်ပါ</string>
+    <string name="aweme_open_ssl_cancel">ဖျက်သိမ်းပါ</string>
+    <string name="aweme_open_ssl_continue">ဆက်လုပ်မလား။</string>
+    <string name="aweme_open_ssl_error">အထောက်အထား လက်မှတ် ပြဿနာ</string>
+    <string name="aweme_open_ssl_expired">အထောက်အထားလက်မှတ် သက်တမ်းကုန်သွားပြီ</string>
+    <string name="aweme_open_ssl_mismatched">အထောက်အထားလက်မှတ် အမည် မကိုက်ညီပါ</string>
+    <string name="aweme_open_ssl_notyetvalid">အထောက်အထားလက်မှတ် အကျုံးမဝင်ပါ</string>
+    <string name="aweme_open_ssl_ok">အိုကေ</string>
+    <string name="aweme_open_ssl_untrusted">အထောက်အထားလက်မှတ်ကို ယုံကြည်မထားပါ</string>
+    <string name="aweme_open_ssl_warning">သတိပေးမည်</string>
+</resources>

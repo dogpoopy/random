@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="abc_dialog_fixed_height_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_height_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_major">50.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_minor">70.00001%</item>
+    <item type="dimen" name="abc_dialog_min_width_major">45.000004%</item>
+    <item type="dimen" name="abc_dialog_min_width_minor">72.0%</item>
+    <dimen name="abc_search_view_text_min_width">192.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_alert_divider">1.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_alert_font_size">27.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_alert_height">300.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_alert_width">525.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_button_height_53">79.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_btn_font_size">24.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_btn_height">63.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_btn_horizontal_margin">60.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_btn_negative_top_margin">22.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_btn_top_margin">88.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_icon_height">120.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_icon_width">150.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_msg_font_size">21.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_msg_top_margin">30.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_nickname_font_size">21.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_space_110">165.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_space_65">97.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_confirm_space_70">105.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_login_scan_code_toast_bg_radius_size">6.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_login_scan_code_toast_icon_size">18.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_login_scan_code_toast_max_width">465.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_login_scan_code_toast_text_size">16.5sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_padding_20">30.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_padding_45">67.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_radius_3">4.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_remember_login_info_size">18.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_1">1.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_10">15.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_15">22.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_20">30.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_3">4.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_30">45.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_5">7.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_50">75.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_space_60">90.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_title_bar_back_margin">22.5dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_title_bar_back_size">33.0dip</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_title_bar_font_size">27.0sp</dimen>
+    <dimen name="netease_mpay_oversea__codescanner_title_bar_height">66.0dip</dimen>
+    <dimen name="netease_permissionkit_sdk__height_15">22.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__height_35">52.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__margin_15">22.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__margin_20">30.0dip</dimen>
+    <dimen name="netease_permissionkit_sdk__margin_minus_2">-3.0dip</dimen>
+    <dimen name="netease_permissionkit_sdk__margin_minus_7">-10.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__padding_5">7.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__text_12">18.0dip</dimen>
+    <dimen name="netease_permissionkit_sdk__text_15">22.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__width_1">1.5dip</dimen>
+    <dimen name="netease_permissionkit_sdk__width_280">420.0dip</dimen>
+</resources>

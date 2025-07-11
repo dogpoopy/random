@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нових обавештења</item>
+        <item quantity="one">%d ново обавештење</item>
+        <item quantity="few">%d нова обавештења</item>
+    </plurals>
+    <plurals name="tw__time_hours">
+        <item quantity="other">%dс</item>
+        <item quantity="one">1с</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="other">%dм</item>
+        <item quantity="one">1м</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="other">%dс</item>
+        <item quantity="one">1с</item>
+    </plurals>
+</resources>

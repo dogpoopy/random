@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/netease_mpay_codescanner__login_scan_code_toast_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@drawable/netease_mpay_oversea_codescanner__login_scan_code_login_toast_bg" android:padding="@dimen/netease_mpay_oversea__codescanner_login_scan_code_toast_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.95">
+            <ImageView android:layout_width="@dimen/netease_mpay_oversea__codescanner_login_scan_code_toast_icon_size" android:layout_height="@dimen/netease_mpay_oversea__codescanner_login_scan_code_toast_icon_size" android:layout_marginTop="@dimen/netease_mpay_oversea__codescanner_space_1" android:src="@drawable/netease_mpay_oversea_codescanner__img_src_icon_toast_tips" />
+            <TextView android:textSize="@dimen/netease_mpay_oversea__codescanner_login_scan_code_toast_text_size" android:textColor="@color/netease_mpay_codescanner__login_scan_code_toast_text_color" android:gravity="left" android:layout_gravity="center" android:id="@id/netease_mpay_codescanner__login_scan_code_toast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/netease_mpay_oversea__codescanner_space_5" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LifeAfter</string>
+    <string name="crop__cancel">取消</string>
+    <string name="crop__done">完成</string>
+    <string name="crop__pick_error">图片不可用</string>
+    <string name="crop__saving">图片保存中</string>
+    <string name="crop__wait">请稍后</string>
+    <string name="picedit_camera_cancel">取消</string>
+    <string name="picedit_camera_ok">确定</string>
+    <string name="picedit_need_permission_of_record_audio">录制视频需要使用麦克风，因此需要用户授予麦克风权限。</string>
+    <string name="picedit_need_permission_of_record_audio_tip">录制视频将不会收录声音，若需要收录声音，请在系统设置中授予麦克风权限。</string>
+    <string name="picedit_operation_photo_video_tips">轻触拍照，长按录像</string>
+    <string name="picedit_operation_video_tips">长按录像</string>
+    <string name="picedit_record_video_duration_less_than_one_second">拍摄时间过短，请重新拍摄</string>
+    <string name="picedit_record_video_failed">录像失败</string>
+    <string name="picedit_take_photo_failed">拍照失败</string>
+    <string name="piceidt_camera_exception">相机功能异常</string>
+</resources>

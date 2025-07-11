@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/netease_mpay_oversea__message_root" android:background="@drawable/netease_mpay_oversea__welcome_bg" android:layout_width="@dimen/netease_mpay_oversea__welcome_width" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="start|center" android:id="@id/netease_mpay_oversea__message_logo" android:layout_width="@dimen/netease_mpay_oversea__icon_40" android:layout_height="@dimen/netease_mpay_oversea__icon_40" android:layout_marginLeft="@dimen/netease_mpay_oversea__margin_10" android:layout_marginRight="@dimen/netease_mpay_oversea__margin_5" android:src="@drawable/netease_mpay_oversea__ic_google_play_games" android:scaleType="fitXY" />
+        <TextView android:textSize="@dimen/netease_mpay_oversea__text_14" android:textColor="@color/netease_mpay_oversea__button_font_04" android:gravity="start" android:layout_gravity="start|center" android:id="@id/netease_mpay_oversea__message_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/netease_mpay_oversea__margin_5" android:layout_marginRight="@dimen/netease_mpay_oversea__margin_10" android:maxLines="3" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

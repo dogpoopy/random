@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="23" android:compileSdkVersionCodename="6.0-2438415" android:installLocation="auto" package="com.netease.mrzhna" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BATTERY_STATS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:appCategory="game" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="false" android:hasCode="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.netease.ntunisdk.application.NtSdkApplication" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:supportsRtl="true">
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data android:name="com.samsung.android.keepalive.density" android:value="true"/>
+        <meta-data android:name="android.vendor.full_screen" android:value="true"/>
+        <meta-data android:name="android.vendor.home_indicator" android:value="hide"/>
+        <meta-data android:name="notch.config" android:value="landscape"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/notification"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name="com.netease.mrzhna.Launcher" android:screenOrientation="landscape" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:label="@string/app_name" android:name="com.netease.mrzhna.Client" android:screenOrientation="landscape" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen">
+            <meta-data android:name="android.app.lib_name" android:value="client"/>
+            <meta-data android:name="android.max_aspect" android:value="2.4"/>
+            <meta-data android:name="com.samsung.android.keepalive.density" android:value="true"/>
+        </activity>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:name="com.netease.mrzhna.VideoPlayer" android:screenOrientation="behind" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen"/>
+        <activity android:launchMode="standard" android:name="com.netease.mrzhna.PermissionNotification" android:screenOrientation="landscape" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen"/>
+        <receiver android:name="com.netease.mrzhna.AlarmReceiver"/>
+        <provider android:authorities="com.netease.mrzhna.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.netease.ntunisdk.CommonSdkProxyActivity" android:theme="@style/UniCommTransparent"/>
+        <receiver android:name="com.netease.mrzhna.ObbAlarmReceiver"/>
+        <service android:name="com.netease.mrzhna.ObbDownloaderService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:foregroundServiceType="dataSync" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <provider android:authorities="com.netease.mrzhna.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <meta-data android:name="uni_module_applicationLifecycle" android:value="applicationLifecycle"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:launchMode="singleTask" android:name="com.netease.ntunisdk.base.deeplink.UniDeepLinkActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="game.mobile" android:pathPrefix="/mrzhna" android:scheme="ntes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="game.mobile" android:pathPrefix="/g66naxx2gb." android:scheme="ntes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="game.mobile" android:scheme="ntesg66naxx2gb"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="com.netease.mrzhna" android:scheme="ntesg66naxx2gb"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.netease.mpay.oversea.tiktok.CLIENT_KEY" android:value="awwgw8atutt3appa"/>
+        <meta-data android:name="com.netease.mpay.oversea.WEB_CLIENT_ID" android:value="529895160150-2tlh8ntrjne89ecl4aqt2mbgkpfal7sg.apps.googleusercontent.com"/>
+        <meta-data android:name="com.netease.mpay.oversea.twitter.KEY" android:value="AcvZcCWUJG20ejoxtSWo9Gi11"/>
+        <meta-data android:name="com.netease.mpay.oversea.twitter.SECRET" android:value="oQhdmiMeNT2XcPXzrz9pUPhDhCuL9evMFeOkSgiVpR5jQdFeIn"/>
+        <meta-data android:name="com.netease.mpay.oversea.wechat.KEY" android:value=""/>
+        <meta-data android:name="com.netease.global.publish.area" android:value="1"/>
+        <meta-data android:name="com.sfchannel.appid" android:value="394"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.netease.mrzhna.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenSize" android:exported="true" android:launchMode="singleInstance" android:name="com.netease.mpay.oversea.MpayActivityStub" android:screenOrientation="behind" android:theme="@style/NeteaseMpay.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="mpsdk169"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenLayout|screenSize" android:exported="true" android:name="com.netease.mpay.oversea.thirdapi.DMMLoginActivity" android:screenOrientation="behind" android:theme="@style/NeteaseMpay.Transparent"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenLayout|screenSize" android:exported="true" android:name="com.netease.mpay.oversea.MpayActivity" android:screenOrientation="behind" android:theme="@style/NeteaseMpay.Transparent" android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:configChanges="locale|keyboardHidden|orientation|screenLayout|screenSize" android:exported="true" android:name="com.netease.mpay.oversea.thirdapi.TikTokEntryActivity" android:screenOrientation="behind" android:theme="@style/NeteaseMpay.Transparent"/>
+        <meta-data android:name="uni_module_deviceInfo" android:value="deviceInfo"/>
+        <meta-data android:name="APPLICATION_CLASS_NAME" android:value="com.netease.ntunisdk.application.NtSdkApplication"/>
+        <activity android:name="com.netease.ntunisdk.external.protocol.ProtocolLauncher" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen"/>
+        <meta-data android:name="com.netease.inner.pushclient.firebase.FirebaseMessageAppsflyer" android:value="true"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.netease.mpay.oversea.scan.QrScannerActivity" android:screenOrientation="behind" android:theme="@style/NeteaseCodeScanner.Transparent"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="com.netease.mpay.oversea.auth.AuthActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="route" android:pathPrefix="/g66naxx2gb/" android:scheme="easebarmpay"/>
+            </intent-filter>
+            <meta-data android:name="android.app.trident_lib" android:value="trident"/>
+            <meta-data android:name="android.app.trident_modules_resource_id" android:resource="@array/trident_modules"/>
+        </activity>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <meta-data android:name="com.google.gms.fitness.sdk.version" android:value="21.1.0"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/ga_ad_services_config"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <uses-library android:name="android.ext.adservices" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize" android:hardwareAccelerated="true" android:name="com.netease.unisdk.gmbridge5.activity.GMWebviewActivity" android:screenOrientation="sensorLandscape" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustUnspecified|stateUnspecified"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize" android:hardwareAccelerated="true" android:name="com.netease.unisdk.gmbridge5.activity.GMWebviewActivityEx" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustResize"/>
+        <provider android:authorities="com.netease.mrzhna.gmbridge.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.unisdk.gmbridge5.provider.GmFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/gm_provider_paths"/>
+        </provider>
+        <activity android:exported="true" android:launchMode="singleInstance" android:name="com.netease.mrzhna.tiktokapi.TikTokEntryActivity"/>
+        <activity-alias android:exported="true" android:launchMode="singleInstance" android:name=".tiktokapi.TikTokEntryActivity" android:targetActivity="com.netease.mrzhna.tiktokapi.TikTokEntryActivity"/>
+        <provider android:authorities="com.netease.mrzhna.unidouyin.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.UniDouYinFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <activity android:name="com.bytedance.sdk.open.tiktok.ui.TikTokWebAuthorizeActivity" android:screenOrientation="behind" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen"/>
+        <service android:enabled="true" android:foregroundServiceType="mediaProjection" android:name="com.netease.cc.screen_record.codec.screencapture.ScreenCaptureService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="cct.com.netease.mrzhna" android:scheme="fbconnect"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1142533622588358" android:exported="true" android:name="com.facebook.FacebookContentProvider"/>
+        <provider android:authorities="com.netease.mrzhna.fb.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.UniFacebookFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/share_fb_file_paths"/>
+        </provider>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <provider android:authorities="com.netease.mrzhna.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.netease.mrzhna.tw.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.UniTwitterFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/share_twitter_file_paths"/>
+        </provider>
+        <meta-data android:name="unisdk.sc.twitter.KEY" android:value="k"/>
+        <meta-data android:name="unisdk.sc.twitter.SECRET" android:value="s"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:theme="@style/MediaTheme"/>
+        <activity android:exported="true" android:name="com.twitter.sdk.android.tweetui.GalleryActivity" android:theme="@style/MediaTheme"/>
+        <activity android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <service android:enabled="true" android:exported="false" android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <meta-data android:name="com.android.app.gamemode.performance.enabled" android:value="true"/>
+        <meta-data android:name="com.android.app.gamemode.battery.enabled" android:value="true"/>
+        <meta-data android:name="android.game_mode_config" android:resource="@xml/game_mode_config"/>
+        <provider android:authorities="com.netease.mrzhna.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="com.netease.ntunisdk.piclib.PicLibActivity" android:theme="@style/piclib" android:windowSoftInputMode="adjustPan"/>
+        <provider android:authorities="com.netease.mrzhna.piclib.OtherWayFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.piclib.OtherWayFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/pic_edit_other_path"/>
+        </provider>
+        <activity android:configChanges="orientation|screenLayout|screenSize" android:exported="false" android:name="com.netease.ntunisdk.piclib.camera.CameraActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen"/>
+        <service android:enabled="false" android:exported="false" android:name="androidx.camera.core.impl.MetadataHolderService">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <uses-library android:name="androidx.camera.extensions.impl" android:required="false"/>
+        <service android:exported="false" android:name="com.netease.inner.pushclient.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.netease.inner.pushclient.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true"/>
+        </receiver>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.FirebaseDynamicLinksKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:authorities="com.netease.mrzhna.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.gms.games.APP_ID" android:value="@string/google_sc_app_id"/>
+        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true"/>
+        <meta-data android:name="com.facebook.sdk.AutoInitEnabled" android:value="true"/>
+        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true"/>
+        <activity android:configChanges="keyboardHidden|navigation|orientation|screenLayout|screenSize" android:hardwareAccelerated="true" android:name="com.netease.ntunisdk.ui.NgWebviewActivity" android:process=":ngwebview" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustUnspecified|stateUnspecified"/>
+        <provider android:authorities="com.netease.mrzhna.ngwebview.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.NgWebviewFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ngwebview_file_paths"/>
+        </provider>
+        <service android:name="com.netease.ntunisdk.aidl.NGRemoteService" android:process=":ngwebview"/>
+        <meta-data android:name="NotifyActivityName" android:value=""/>
+        <meta-data android:name="ngpush_gate" android:value="https://gate.push.x.netease.com"/>
+        <meta-data android:name="ngpush_gateKey" android:value="d42760ff-119c-41b1-8b23-0a94d898150b"/>
+        <meta-data android:name="ngpush_project" android:value="g66na"/>
+        <receiver android:exported="false" android:name="com.netease.neox.PushNotificationReceiver" android:permission="com.netease.mrzhna.permission.ngpush">
+            <intent-filter>
+                <action android:name="com.netease.push.action.client.MESSAGE"/>
+                <action android:name="com.netease.push.action.client.NEWID"/>
+                <action android:name="com.netease.push.action.client.METHOD"/>
+                <action android:name="com.netease.push.action.client.CHANNLE_NOTI_CLICK"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:label="PushService" android:name="com.netease.pushservice.PushService" android:process=":PushService" android:stopWithTask="true">
+            <intent-filter>
+                <action android:name="com.netease.push.action.service.PUSHSERVICE3"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.netease.ntunisdk.shortcuts.ShortcutRouteActivity" android:screenOrientation="sensorLandscape" android:taskAffinity="com.netease.quickqr" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.netease.ntunisdk.shortcuts.ShortcutMainActivity" android:screenOrientation="sensorLandscape" android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
+        <activity android:configChanges="locale|keyboardHidden|screenSize" android:name="com.netease.ntunisdk.zxing.client.android.CaptureActivity" android:screenOrientation="sensorLandscape" android:theme="@style/Theme.AppCompat.Light.NoActionBar.Fullscreen" android:windowSoftInputMode="adjustPan"/>
+        <provider android:authorities="com.netease.mrzhna.uniqr.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.UniQRFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/qr_provider_paths"/>
+        </provider>
+        <provider android:authorities="com.netease.mrzhna.compat.fileprovider" android:enabled="true" android:exported="false" android:grantUriPermissions="true" android:name="com.netease.ntunisdk.UniCompatFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/sharecompat_file_paths"/>
+        </provider>
+        <meta-data android:name="android.support.VERSION" android:value="25.4.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="6.2.0"/>
+    </application>
+    <queries>
+        <package android:name="com.google.android.gms"/>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.vkontakte.android"/>
+        <package android:name="com.zhiliaoapp.musically"/>
+        <package android:name="com.ss.android.ugc.trill"/>
+        <package android:name="com.android.chrome"/>
+        <package android:name="com.chrome.beta"/>
+        <package android:name="com.chrome.dev"/>
+        <package android:name="com.google.android.play.games"/>
+        <package android:name="com.twitter.android"/>
+        <package android:name="com.twitter.android.beta"/>
+        <intent>
+            <action android:name="com.appsflyer.referrer.INSTALL_PROVIDER"/>
+        </intent>
+        <package android:name="com.facebook.katana"/>
+        <package android:name="com.instagram.android"/>
+        <intent>
+            <data android:host="mobile_game.noahsdk.com" android:scheme="noah"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.facebook.orca"/>
+        <intent>
+            <action android:name="android.media.action.VIDEO_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="androidx.camera.extensions.action.VENDOR_ACTION"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="video/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+    <permission android:name="com.netease.mrzhna.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.netease.mrzhna.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.netease.mrzhna.permission.ngpush"/>
+    <permission android:name="com.netease.mrzhna.permission.ngpush" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.netease.mrzhna.permission.ngpush"/>
+    <permission android:name="com.netease.mrzhna.permission.ngpush" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+</manifest>

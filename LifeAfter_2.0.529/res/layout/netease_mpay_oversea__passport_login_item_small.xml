@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/netease_mpay_oversea__channel_background" android:layout_width="@dimen/netease_mpay_oversea__icon_35" android:layout_height="@dimen/netease_mpay_oversea__icon_35" android:scaleType="fitXY" />
+    <TextView android:gravity="start|center" android:id="@id/netease_mpay_oversea__channel_text" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+</FrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/pic_lib_gray" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.netease.ntunisdk.piclib.view.TagImageView android:id="@id/iv_us_pic_lib_show_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <View android:id="@id/v_us_pic_lib_media_sel_state" android:background="@color/pic_lib_gray_heavy" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/v_us_pic_lib_click" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" />
+    <FrameLayout android:id="@id/fl_us_pic_lib_media_selected_click" android:paddingTop="5.0dip" android:paddingBottom="15.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:paddingStart="15.0dip" android:paddingEnd="5.0dip" android:layout_alignParentEnd="true">
+        <TextView android:textSize="12.0sp" android:textColor="@color/pic_lib_white" android:gravity="center" android:id="@id/tv_us_pic_lib_media_selected_index" android:background="@drawable/selector_us_picedit_media_select" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+    </FrameLayout>
+    <ImageView android:id="@id/iv_us_pic_lib_media_type" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="15.0dip" android:layout_marginBottom="4.0dip" android:layout_alignParentBottom="true" android:layout_marginStart="5.0dip" android:layout_alignParentStart="true" />
+    <View android:id="@id/v_us_pic_lib_media_unavailable_item" android:background="@color/pic_lib_light_white" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/pic_lib_white" android:id="@id/tv_us_pic_lib_media_type_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" />
+</RelativeLayout>

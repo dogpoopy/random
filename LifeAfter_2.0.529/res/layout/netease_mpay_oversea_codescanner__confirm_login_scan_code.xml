@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/netease_mpay_oversea__codescanner_confirm_icon_width" android:layout_height="@dimen/netease_mpay_oversea__codescanner_confirm_icon_height" android:src="@drawable/netease_mpay_oversea_codescanner__ic_confirm_login" />
+    <TextView android:textSize="@dimen/netease_mpay_oversea__codescanner_confirm_msg_font_size" android:textColor="@color/netease_mpay_oversea__codescanner_confirm_msg_font_color" android:id="@id/netease_mpay_oversea__codescanner_confirm_tip1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/netease_mpay_oversea__codescanner_confirm_msg_top_margin" android:text="@string/netease_mpay_oversea__codescanner_confirm_tip" />
+</LinearLayout>

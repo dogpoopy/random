@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ライフ アフター</string>
+    <string name="unisdk_protocol_accept">同意する</string>
+    <string name="unisdk_protocol_cancel">いいえ</string>
+    <string name="unisdk_protocol_confirm">確認</string>
+    <string name="unisdk_protocol_network_error">ネットワークが不安定です。確認の後もう一度お試しください</string>
+    <string name="unisdk_protocol_reject">キャンセル</string>
+    <string name="unisdk_protocol_reject_confirm_back">戻る</string>
+    <string name="unisdk_protocol_reject_confirm_msg">この利用規約に同意されない場合、本ゲームをご利用いただくことはできません。よろしいでしょうか？</string>
+    <string name="unisdk_protocol_reject_confirm_ok">アプリ終了</string>
+    <string name="unisdk_protocol_retry">リトライ</string>
+    <string name="unisdk_protocol_title">利用規約</string>
+    <string name="aweme_loading">読む込み中</string>
+    <string name="aweme_open_error_tips_cancel">キャンセル</string>
+    <string name="aweme_open_network_error_confirm">OK</string>
+    <string name="aweme_open_network_error_tips">ネットワークエラーです。もう一度お試しください。</string>
+    <string name="aweme_open_network_error_title">認証に失敗しました</string>
+    <string name="aweme_open_ssl_cancel">キャンセル</string>
+    <string name="aweme_open_ssl_continue">続行しますか？</string>
+    <string name="aweme_open_ssl_error">証明書エラー</string>
+    <string name="aweme_open_ssl_expired">証明書が失効しています</string>
+    <string name="aweme_open_ssl_mismatched">証明書が不一致です</string>
+    <string name="aweme_open_ssl_notyetvalid">証明書はまだ有効ではありません</string>
+    <string name="aweme_open_ssl_ok">OK</string>
+    <string name="aweme_open_ssl_untrusted">この証明書は信頼されません</string>
+    <string name="aweme_open_ssl_warning">エラー警告</string>
+</resources>

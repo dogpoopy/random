@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path name="ngwebview_files_ext" path="." />
+    <files-path name="ngwebview_files_inn" path="." />
+    <extenal-path name="ngwebview_files_pub" path="." />
+    <root-path name="ngwebview_files_root" path="." />
+</paths>

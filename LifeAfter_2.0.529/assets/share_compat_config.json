@@ -1,0 +1,227 @@
+{
+  "weixin": {
+    "name": "微信",
+    "packages": [
+      "com.tencent.mm"
+    ],
+    "types": [
+      101,
+      102,
+      311
+    ],
+    "mapping": {
+      "101": "com.tencent.mm.ui.tools.ShareImgUI",
+      "102": "com.tencent.mm.ui.tools.ShareToTimeLineUI",
+      "311": "com.tencent.mm.ui.tools.ShareToStatusUI"
+    },
+    "can_back": false
+  },
+  "wechat": {
+    "name": "微信",
+    "packages": [
+      "com.tencent.mm"
+    ],
+    "types": [
+      101,
+      102,
+      311
+    ],
+    "mapping": {
+      "101": "com.tencent.mm.ui.tools.ShareImgUI",
+      "102": "com.tencent.mm.ui.tools.ShareToTimeLineUI",
+      "311": "com.tencent.mm.ui.tools.ShareToStatusUI"
+    },
+    "can_back": false
+  },
+  "weibo": {
+    "name": "微博",
+    "packages": [
+      "com.sina.weibo",
+      "com.weico.international"
+    ],
+    "types": [
+      100
+    ],
+    "can_back": true,
+    "insert": true
+  },
+  "qq": {
+    "name": "QQ",
+    "packages": [
+      "com.tencent.mobileqq",
+      "com.tencent.qqlite",
+      "com.tencent.tim",
+      "com.tencent.mobileqqi"
+    ],
+    "types": [
+      105
+    ],
+    "can_back": false
+  },
+  "qzone": {
+    "name": "QQ空间",
+    "packages": [
+      "com.qzone"
+    ],
+    "types": [
+      106
+    ],
+    "can_back": true,
+    "insert": true
+  },
+  "yixin": {
+    "name": "易信",
+    "packages": [
+      "im.yixin"
+    ],
+    "types": [
+      103,
+      104
+    ],
+    "mapping": {
+      "103": "im.yixin.activity.share.ShareToSessionActivity",
+      "104": "im.yixin.activity.share.ShareToSnsActivity"
+    },
+    "can_back": true
+  },
+  "facebook": {
+    "name": "Facebook",
+    "packages": [
+      "com.facebook.katana",
+      "com.facebook.lite"
+    ],
+    "types": [
+      108
+    ],
+    "can_back": true
+  },
+  "facebook messenger": {
+    "name": "Messenger",
+    "packages": [
+      "com.facebook.orca",
+      "com.facebook.mlite"
+    ],
+    "types": [
+      115
+    ],
+    "can_back": true
+  },
+  "instagram": {
+    "name": "Instagram",
+    "packages": [
+      "com.instagram.android"
+    ],
+    "types": [
+      121,
+      201,
+      307
+    ],
+    "can_back": false
+  },
+  "kakao": {
+    "name": "KakaoTalk",
+    "packages": [
+      "com.kakao.talk"
+    ],
+    "types": [
+      110
+    ],
+    "can_back": false
+  },
+  "kakaotalk": {
+    "name": "KakaoTalk",
+    "packages": [
+      "com.kakao.talk"
+    ],
+    "types": [
+      110
+    ],
+    "can_back": false
+  },
+  "kakaostory": {
+    "name": "KakaoStory",
+    "packages": [
+      "com.kakao.story"
+    ],
+    "types": [
+      304
+    ],
+    "can_back": false
+  },
+  "twitter": {
+    "name": "Twitter",
+    "packages": [
+      "com.twitter.android"
+    ],
+    "types": [
+      111,
+      202
+    ],
+    "can_back": true
+  },
+  "whatsapp": {
+    "name": "WhatsApp",
+    "packages": [
+      "com.whatsapp"
+    ],
+    "types": [
+      120
+    ],
+    "can_back": true
+  },
+  "line": {
+    "name": "LINE",
+    "packages": [
+      "jp.naver.line.android"
+    ],
+    "types": [
+      114,
+      203
+    ],
+    "can_back": false
+  },
+  "youtube": {
+    "name": "YouTube",
+    "packages": [
+      "com.google.android.youtube"
+    ],
+    "types": [
+      122
+    ],
+    "can_back": false
+  },
+  "douyin": {
+    "name": "抖音",
+    "packages": [
+      "com.ss.android.ugc.aweme",
+      "com.ss.android.ugc.trill",
+      "com.zhiliaoapp.musically"
+    ],
+    "types": [
+      302
+    ],
+    "can_back": false
+  },
+  "tiktok": {
+    "name": "TikTok",
+    "packages": [
+      "com.ss.android.ugc.trill",
+      "com.zhiliaoapp.musically"
+    ],
+    "types": [
+      305
+    ],
+    "can_back": false
+  },
+  "kuaishou": {
+    "name": "快手",
+    "packages": [
+      "com.smile.gifmaker"
+    ],
+    "types": [
+      303
+    ],
+    "can_back": false,
+    "insert": true
+  }
+}

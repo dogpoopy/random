@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d התראות חדשות</item>
+        <item quantity="one">התראה חדשה אחת (%d)</item>
+        <item quantity="two">%d התראות חדשות</item>
+        <item quantity="many">%d התראות חדשות</item>
+    </plurals>
+    <plurals name="tw__time_hours">
+        <item quantity="other">%d שעות</item>
+        <item quantity="one">שעה אחת</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="other">%d דקות</item>
+        <item quantity="one">דקה אחת</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="other">%d שניות</item>
+        <item quantity="one">שנייה אחת</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center_vertical" android:id="@id/netease_mpay_oversea__codescanner_titlebar_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/netease_mpay_oversea__codescanner_title_bar_back" android:background="@drawable/netease_mpay_oversea_codescanner__title_bar_back" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/netease_mpay_oversea__codescanner_title_bar_back_ic" android:layout_width="@dimen/netease_mpay_oversea__codescanner_title_bar_back_size" android:layout_height="@dimen/netease_mpay_oversea__codescanner_title_bar_back_size" android:layout_marginLeft="@dimen/netease_mpay_oversea__codescanner_title_bar_back_margin" android:layout_marginRight="@dimen/netease_mpay_oversea__codescanner_title_bar_back_margin" android:src="@drawable/netease_mpay_oversea_codescanner__ic_back_black" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/netease_mpay_oversea__codescanner_title_bar_font_size" android:gravity="center" android:layout_gravity="center" android:id="@id/netease_mpay_oversea__codescanner_title_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

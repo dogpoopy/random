@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/netease_mpay_oversea__root_view" android:layout_width="@dimen/netease_mpay_oversea__login_alert_dialog_with_colse_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/netease_mpay_oversea__popup_bg" android:paddingTop="@dimen/netease_mpay_oversea__padding_25" android:paddingBottom="@dimen/netease_mpay_oversea__padding_15" android:layout_width="@dimen/netease_mpay_oversea__login_alert_dialog_width" android:layout_height="wrap_content" android:layout_margin="@dimen/netease_mpay_oversea__margin_10" android:isScrollContainer="true">
+        <TextView android:textSize="@dimen/netease_mpay_oversea__login_alert_dialog_message_text" android:textColor="@color/netease_mpay_oversea__popup_text" android:gravity="start|center" android:id="@id/netease_mpay_oversea__alert_message" android:layout_width="fill_parent" android:layout_height="@dimen/netease_mpay_oversea__text_view_height_78" android:layout_marginLeft="@dimen/netease_mpay_oversea__margin_25" android:layout_marginRight="@dimen/netease_mpay_oversea__margin_25" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <FrameLayout android:layout_gravity="center|bottom" android:id="@id/netease_mpay_oversea__type" android:layout_width="@dimen/netease_mpay_oversea__channel_btn_size_135" android:layout_height="@dimen/netease_mpay_oversea__channel_btn_size_42" android:layout_marginBottom="@dimen/netease_mpay_oversea__margin_25">
+                <ImageView android:layout_gravity="center" android:id="@id/netease_mpay_oversea__icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+                <TextView android:textSize="@dimen/netease_mpay_oversea__channel_text_size_13" android:textStyle="bold" android:ellipsize="end" android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/netease_mpay_oversea__title" android:layout_width="@dimen/netease_mpay_oversea__channel_text_view_size_89" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/netease_mpay_oversea__margin_38" android:maxLines="2" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:gravity="start|center" android:layout_gravity="end|top" android:id="@id/netease_mpay_oversea__close_button" android:background="@drawable/netease_mpay_oversea__dialog_close_background" android:layout_width="@dimen/netease_mpay_oversea__icon_35" android:layout_height="@dimen/netease_mpay_oversea__icon_35" />
+</FrameLayout>

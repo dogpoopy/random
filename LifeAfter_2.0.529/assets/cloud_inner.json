@@ -1,0 +1,12 @@
+{
+ "base_url":"https://g66.gsf.inner.netease.com/cloudfile/",
+ "version_url":"https://g66.list.inner.netease.com/patch_list_cloudfile.txt",
+ "fname_case_sensitive":0,
+ "update_mode":0,
+ "downloader_connect_num":2,
+ "downloader_running_num":64,
+ "combo_patch_dir":"cloudfile/",
+ "combo_patch_path":"temp_cache/res.zip",
+ "zipres_repo_enable":true,
+ "enable_namehash_check":true
+}

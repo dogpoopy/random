@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="-2.0px" android:top="-2.0px" android:right="-2.0px" android:bottom="2.0px">
+        <shape>
+            <solid android:color="#00ffffff" />
+            <stroke android:width="2.0px" android:color="@color/netease_mpay_oversea__usercenter_switch_edit" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/right_navigation_bar" android:visibility="gone" android:layout_width="45.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/r_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/uni_gm_p_b_s" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="back" />
+            <ImageView android:id="@id/r_forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:src="@drawable/uni_gm_p_q_s" android:layout_below="@id/r_back" android:layout_centerHorizontal="true" android:contentDescription="forward" />
+            <ImageView android:id="@id/r_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:src="@drawable/uni_gm_r_s" android:layout_below="@id/r_forward" android:layout_centerHorizontal="true" android:contentDescription="refresh" />
+            <ImageView android:id="@id/r_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:src="@drawable/uni_gm_c_s" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:contentDescription="close" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/top_navigation_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_alignParentTop="true">
+            <ImageView android:id="@id/t_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:src="@drawable/uni_gm_p_b_s" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="back" />
+            <ImageView android:id="@id/t_forward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:src="@drawable/uni_gm_p_q_s" android:layout_toRightOf="@id/t_back" android:layout_centerVertical="true" android:contentDescription="forward" />
+            <ImageView android:id="@id/t_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dip" android:src="@drawable/uni_gm_r_s" android:layout_toRightOf="@id/t_forward" android:layout_centerVertical="true" android:contentDescription="refresh" />
+            <ImageView android:id="@id/t_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/uni_gm_c_s" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="close" />
+        </RelativeLayout>
+        <WebView android:id="@id/web" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/right_navigation_bar" android:layout_below="@id/top_navigation_bar" />
+        <FrameLayout android:id="@id/full_video" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/right_navigation_bar" android:layout_below="@id/top_navigation_bar" />
+    </RelativeLayout>
+</FrameLayout>

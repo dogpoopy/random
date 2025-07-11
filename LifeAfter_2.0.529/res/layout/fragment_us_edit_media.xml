@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/pic_lib_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_us_pic_lib_edit_image_recreate_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/rl_us_pic_lib_edit_crop_func_b" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/iv_us_pic_lib_edit_crop_cancel" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/uie_drawable_crop_cancel" android:layout_centerVertical="true" android:layout_marginStart="20.0dip" android:layout_alignParentStart="true" />
+        <ImageView android:id="@id/iv_us_pic_lib_edit_crop_revert" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/png_us_edit_undo" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/iv_us_pic_lib_edit_crop_done" android:padding="10.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/uie_drawable_crop_done" android:layout_centerVertical="true" android:layout_marginEnd="20.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_us_pic_lib_edit_func" android:background="@color/pic_lib_black_tran" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <FrameLayout android:id="@id/fl_us_pic_lib_edit_drawing_tools_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" android:layout_toStartOf="@id/bt_us_pic_lib_edit_complete">
+                <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/iv_us_pic_lib_edit_command_graffiti" android:background="@drawable/ripple_us_picedit_edit_rec" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/png_us_edit_draw_tool_selector" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    <ImageView android:id="@id/iv_us_pic_lib_edit_command_edit_text" android:background="@drawable/ripple_us_picedit_edit_rec" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/png_us_edit_text_input_tool_selector" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    <ImageView android:id="@id/iv_us_pic_lib_edit_command_crop" android:background="@drawable/ripple_us_picedit_edit_rec" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/png_us_edit_crop_tool_selector" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    <ImageView android:id="@id/iv_us_pic_lib_edit_command_mosaic" android:background="@drawable/ripple_us_picedit_edit_rec" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/png_us_edit_mosaic_tool_selector" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <Button android:textColor="@color/pic_lib_white" android:id="@id/bt_us_pic_lib_edit_complete" android:background="@drawable/shape_us_picedit_over" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="@string/picedit_finish" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_marginStart="5.0dip" android:layout_marginEnd="15.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_us_pic_lib_edit_cancel" android:background="@drawable/ripple_us_picedit_default" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="50.0dip" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" android:layout_alignParentStart="true">
+        <ImageView android:id="@id/iv_us_pic_lib_edit_return" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/svg_us_picedit_return" />
+    </LinearLayout>
+</RelativeLayout>
